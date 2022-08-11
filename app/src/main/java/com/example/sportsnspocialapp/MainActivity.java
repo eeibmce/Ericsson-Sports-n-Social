@@ -30,4 +30,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         setContentView(R.layout.activity_chat_page);
     }
+
 }
