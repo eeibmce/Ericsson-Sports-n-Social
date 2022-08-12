@@ -1,5 +1,13 @@
 package com.example.sportsnspocialapp;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
+
 import android.os.Bundle;
 import android.view.WindowManager;
 
@@ -16,6 +24,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 //import androidx.navigation.fragment.findNavController;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -39,6 +48,15 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
+    }
+
+    public void logout(View view) {
+        FirebaseAuth.getInstance().signOut();
+        startActivity(new Intent(getApplicationContext(), Login.class));
+        finish();
+    }
+
+}
 //        //Animations
 //        topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation);
 //        bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
