@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/enmcnoa/AndroidStudioProjects/Ericsson-Sports-n-Social/app/src/main/res/drawable/rounded_button.xml" value="0.1" />
+        <entry key="..\:/Users/enmcnoa/AndroidStudioProjects/Ericsson-Sports-n-Social/app/src/main/res/layout/activity_golf.xml" value="0.1" />
+        <entry key="..\:/Users/enmcnoa/AndroidStudioProjects/Ericsson-Sports-n-Social/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/enmcnoa/AndroidStudioProjects/Ericsson-Sports-n-Social/app/src/main/res/layout/activity_pool2.xml" value="0.1" />
+        <entry key="..\:/Users/enmcnoa/AndroidStudioProjects/Ericsson-Sports-n-Social/app/src/main/res/layout/content_pool.xml" value="0.1" />
+        <entry key="..\:/Users/enmcnoa/AndroidStudioProjects/Ericsson-Sports-n-Social/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/enmcnoa/AndroidStudioProjects/Ericsson-Sports-n-Social/app/src/main/res/layout/fragment_pool.xml" value="0.1" />
+        <entry key="..\:/Users/enmcnoa/AndroidStudioProjects/Ericsson-Sports-n-Social/app/src/main/res/layout/fragment_second.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
