@@ -3,6 +3,7 @@ package com.example.sportsnspocialapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Chat_page.class);
         startActivity(intent);
         setContentView(R.layout.activity_chat_page);
+    }
+    public void browser(View view){
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/egsathlone/home"));
+        startActivity(browserIntent);
     }
 
 }
