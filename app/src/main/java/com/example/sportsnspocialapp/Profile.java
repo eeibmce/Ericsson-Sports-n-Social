@@ -1,8 +1,5 @@
 package com.example.sportsnspocialapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +7,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -32,7 +32,6 @@ public class Profile extends AppCompatActivity {
         setContentView(R.layout.activity_profile);
 
 
-
         fullName = findViewById(R.id.profileName);
         email = findViewById(R.id.profileEmail);
 
@@ -45,7 +44,7 @@ public class Profile extends AppCompatActivity {
         userId = fAuth.getCurrentUser().getUid();
         FirebaseUser user = fAuth.getCurrentUser();
 
-        if(!user.isEmailVerified()){
+        if (!user.isEmailVerified()) {
             verifymsg.setVisibility(View.VISIBLE);
             resendCode.setVisibility(View.VISIBLE);
 
@@ -66,13 +65,14 @@ public class Profile extends AppCompatActivity {
                     });
                 }
             });
-        }else {
+        } else {
             verifymsg.setVisibility(View.GONE);
             resendCode.setVisibility(View.GONE);
 
         }
     }
-    public void logout(View view){
+
+    public void logout(View view) {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(getApplicationContext(), Login.class));
         finish();
