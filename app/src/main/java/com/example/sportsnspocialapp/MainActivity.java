@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle;
+import android.os.Bundle; 
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
@@ -17,10 +17,11 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     private Button button;
     //ImageButton btnAdd = (ImageButton)findViewById(R.id.imageButton2);
+ 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        super.onCreate(savedInstanceState); 
         setContentView(R.layout.fragment_home);
 
 //        Button contact = (Button) findViewById(R.id.button);
@@ -96,3 +97,26 @@ public class MainActivity extends AppCompatActivity {
 
 }
 
+ 
+        setContentView(R.layout.activity_main);
+        System.out.println("We are in onCreate in Main Activity");
+        button = (ImageButton) findViewById(R.id.imageButton2);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openChat_page();
+            }
+        });
+    }
+
+    public void openChat_page(){
+        Intent intent = new Intent(this, Chat_page.class);
+        startActivity(intent);
+        setContentView(R.layout.activity_chat_page);
+    }
+    public void browser(View view){
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/egsathlone/home"));
+        startActivity(browserIntent);
+    }
+
+} 
