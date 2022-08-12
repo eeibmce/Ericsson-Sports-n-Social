@@ -68,7 +68,7 @@ public class Login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(Login.this, "Logged in Successfully.", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(), Profile.class));
                         } else {
                             Toast.makeText(Login.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
@@ -83,7 +83,7 @@ public class Login extends AppCompatActivity {
         mCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Register.class));
+                startActivity(new Intent(getApplicationContext(),Register.class));
 
             }
         });
@@ -105,7 +105,7 @@ public class Login extends AppCompatActivity {
                         String mail = resetMail.getText().toString();
                         fAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
-                            public void onSuccess(Void unused) {
+                            public void onSuccess(Void aVoid) {
                                 Toast.makeText(Login.this, "Reset Link Sent To Your Email.", Toast.LENGTH_SHORT).show();
                             }
                         }).addOnFailureListener(new OnFailureListener() {
@@ -125,7 +125,10 @@ public class Login extends AppCompatActivity {
                 });
 
                 passwordResetDialog.create().show();
+
+
             }
+
 
         });
     }

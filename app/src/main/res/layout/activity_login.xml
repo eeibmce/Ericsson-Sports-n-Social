@@ -81,7 +81,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintVertical_bias="0.712" />
 
     <Button
         android:id="@+id/Login"
@@ -92,10 +92,10 @@
         android:text="Login"
         app:layout_constraintBottom_toTopOf="@+id/Create"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.611"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.858" />
+        app:layout_constraintVertical_bias="0.864" />
 
     <TextView
         android:id="@+id/ForgotPassword"

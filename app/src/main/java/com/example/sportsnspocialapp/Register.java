@@ -1,10 +1,11 @@
 package com.example.sportsnspocialapp;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -21,12 +22,19 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Register extends AppCompatActivity {
     EditText mFullName, mEmail, mPassword;
     Button mRegister;
     TextView mLOG;
     FirebaseAuth fAuth;
+    FirebaseFirestore fStore;
+    String userID;
 
 
     @Override
@@ -38,12 +46,20 @@ public class Register extends AppCompatActivity {
         mEmail = findViewById(R.id.Email);
         mPassword = findViewById(R.id.Password);
         mRegister = findViewById(R.id.Register);
-        mLOG = findViewById(R.id.LOG);
+        mLOG = findViewById(R.id.goLog);
 
         fAuth = FirebaseAuth.getInstance();
 
+        mLOG.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Login.class));
+
+            }
+        });
+
         if (fAuth.getCurrentUser() != null) {
-            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            startActivity(new Intent(getApplicationContext(), Profile.class));
             finish();
         }
         mRegister.setOnClickListener(new View.OnClickListener() {
@@ -75,8 +91,9 @@ public class Register extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-                            FirebaseUser user = fAuth.getCurrentUser();
-                            user.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
+
+                            FirebaseUser fuser = fAuth.getCurrentUser();
+                            fuser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void unused) {
                                     Toast.makeText(Register.this, "Verification Email Has Been Sent.", Toast.LENGTH_SHORT).show();
@@ -84,39 +101,46 @@ public class Register extends AppCompatActivity {
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
-
+                                    Log.d("[Error]", "onFailure: Email not sent" + e.getMessage());
                                 }
                             });
 
-
-
-
+//
 
 
                             Toast.makeText(Register.this, "User Created.", Toast.LENGTH_SHORT).show();
+                            userID = fAuth.getCurrentUser().getUid();
+                            DocumentReference documentReference = fStore.collection("users").document(userID);
+
+                            Map<String, Object> user = new HashMap<>();
+                            user.put("fName", mFullName);
+                            user.put("email", email);
+                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                @Override
+                                public void onSuccess(Void unused) {
+                                    Log.d(TAG, "onSuccess: user Profile is created for " + userID);
+                                    documentReference.set(user).addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Log.d(TAG, "onFailure: " + e.toString());
+                                        }
+                                    });
 
 
 
 
+                                }
 
 
-
-
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            });
 
                         } else {
                             Toast.makeText(Register.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
-            }
-        });
 
 
-        mLOG.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Login.class));
 
             }
         });
