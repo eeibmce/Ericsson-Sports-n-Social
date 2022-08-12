@@ -51,8 +51,8 @@
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
-            android:text="Club Info"
-            android:textAlignment="gravity"
+            android:text="Welcome to the EGS Athlone webpage   With close to fifty members, we are one of the biggest societies in Ericsson Athlone.  We have an excellent fixture list and a great history over the last 30+ years.  Please use the navigation menu to browse the site.   If you have any suggestions or improvements for the site please let a committee member know.  New female or male members of any golfing level are most welcome! If you would like to join please contact a committee member "
+            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.6"
@@ -107,24 +107,26 @@
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.729"
+            app:layout_constraintHorizontal_bias="0.631"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.038"
+            app:layout_constraintVertical_bias="0.039"
             app:srcCompat="@drawable/timetable2" />
 
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="164dp"
-            android:layout_height="15dp"
+            android:layout_width="225dp"
+            android:layout_height="41dp"
+            android:onClick="browser"
             android:text="Click her to view website"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.524"
+            app:layout_constraintHorizontal_bias="0.564"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.789"
-            android:onClick="browser"/>
+            app:layout_constraintVertical_bias="0.811" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>
