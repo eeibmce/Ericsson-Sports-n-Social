@@ -111,7 +111,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.039"
-            app:srcCompat="@drawable/timetable2" />
+            app:srcCompat="@drawable/timetable2"
+            tools:ignore="SpeakableTextPresentCheck" />
+
 
         <TextView
             android:id="@+id/textView2"
