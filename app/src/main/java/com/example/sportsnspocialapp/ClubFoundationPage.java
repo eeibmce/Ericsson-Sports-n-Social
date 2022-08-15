@@ -6,17 +6,16 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
-public class MainActivity extends AppCompatActivity {
+public class ClubFoundationPage extends AppCompatActivity {
     private ImageButton button;
     private ImageButton button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_club_foundation_page);
         System.out.println("We are in onCreate in Main Activity");
         button = (ImageButton) findViewById(R.id.imageButton2);
         button.setOnClickListener(new View.OnClickListener() {
@@ -48,4 +47,5 @@ public class MainActivity extends AppCompatActivity {
         startActivity(browserIntent);
     }
 
+    //
 }

@@ -20,7 +20,7 @@
             android:name=".Chat_page"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ClubFoundationPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

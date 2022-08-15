@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundeoin"
-    tools:context=".MainActivity">
+    tools:context=".ClubFoundationPage">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -52,6 +52,7 @@
             android:gravity="start|top"
             android:inputType="textMultiLine"
             android:text="Welcome to the EGS Athlone webpage   With close to fifty members, we are one of the biggest societies in Ericsson Athlone.  We have an excellent fixture list and a great history over the last 30+ years.  Please use the navigation menu to browse the site.   If you have any suggestions or improvements for the site please let a committee member know.  New female or male members of any golfing level are most welcome! If you would like to join please contact a committee member "
+            android:focusable="false"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -99,6 +100,7 @@
             app:layout_constraintHorizontal_bias="0.147"
             app:layout_constraintStart_toStartOf="parent" />
 
+
         <ImageButton
             android:id="@+id/imageButton"
             android:layout_width="102dp"
@@ -107,13 +109,12 @@
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.631"
+            app:layout_constraintHorizontal_bias="0.051"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.039"
             app:srcCompat="@drawable/timetable2"
             tools:ignore="SpeakableTextPresentCheck" />
-
 
         <TextView
             android:id="@+id/textView2"
