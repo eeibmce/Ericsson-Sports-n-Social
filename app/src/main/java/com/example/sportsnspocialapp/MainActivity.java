@@ -30,7 +30,6 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
  
     private ImageButton button;
-    private ImageButton button2;
 
     private Button button;
     //ImageButton btnAdd = (ImageButton)findViewById(R.id.imageButton2);
@@ -156,23 +155,12 @@ public class MainActivity extends AppCompatActivity {
                 openChat_page();
             }
         });
-
-        button2 = (ImageButton) findViewById(R.id.imageButton);
-        button2.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View view){ openCalendar();}
-        });
     }
 
     public void openChat_page(){
         Intent intent = new Intent(this, Chat_page.class);
         startActivity(intent);
         setContentView(R.layout.activity_chat_page);
-    }
-    public void openCalendar(){
-        Intent intent = new Intent(this, Calendar.class);
-        startActivity(intent);
-        setContentView(R.layout.activity_calendar);
     }
     public void browser(View view){
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/egsathlone/home"));
