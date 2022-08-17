@@ -15,7 +15,6 @@ import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
-    private Button button;
     //ImageButton btnAdd = (ImageButton)findViewById(R.id.imageButton2);
 
     @Override
