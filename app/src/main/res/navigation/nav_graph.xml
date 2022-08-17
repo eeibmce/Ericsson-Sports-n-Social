@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph">
+    <fragment
+        android:id="@+id/HomeFragment"
+        android:name="com.example.sportsnspocialapp.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+
+    </fragment>
+    <action
+        android:id="@+id/action_HomeFragment_to_PoolFragment"
+        app:destination="@id/PoolFragment" />
+    <fragment
+        android:id="@+id/PoolFragment"
+        android:name="com.example.sportsnspocialapp.PoolFragment"
+        android:label="fragment_pool"
+        tools:layout="@layout/activity_pool">
+    </fragment>
+
+</navigation>
