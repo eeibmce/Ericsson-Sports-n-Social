@@ -10,7 +10,7 @@ local.properties
 
 # Android Studio generated files and folders
 captures/
-.externalNativeBuild/
+.externalNativueBuild/
 .cxx/
 *.apk
 output.json
