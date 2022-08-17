@@ -1,12 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundeoin"
-    tools:context=".ClubFoundationPage">
+    android:background="@drawable/backgroundeoin">
+<!--    tools:context=".MainActivity">-->
 
+<!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Hello World!"-->
 
 <!--    <ImageView-->
 <!--        android:layout_width="265dp"-->
@@ -30,144 +36,155 @@
     <!--        app:layout_constraintEnd_toEndOf="parent"-->
     <!--        app:layout_constraintStart_toStartOf="parent"-->
     <!--        app:layout_constraintTop_toTopOf="parent" />-->
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
- 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/nav_host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_graph" />
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+<!-- -->
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:id="@+id/nav_host_fragment"-->
+<!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:defaultNavHost="true"-->
+<!--        app:navGraph="@navigation/nav_graph" />-->
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
- 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="417dp"
-            android:layout_height="41dp"
-            android:background="#3F51B5"
-            android:fontFamily="sans-serif-smallcaps"
-            android:text="Club Name"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="34sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.127" />
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+<!-- -->
+<!--        <TextView-->
+<!--            android:id="@+id/textView"-->
+<!--            android:layout_width="417dp"-->
+<!--            android:layout_height="41dp"-->
+<!--            android:background="#3F51B5"-->
+<!--            android:fontFamily="sans-serif-smallcaps"-->
+<!--            android:text="Club Name"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="34sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.127" />-->
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="59dp"
-            android:layout_height="48dp"
-            android:background="#00283593"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.925"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.039"
-            app:srcCompat="@android:drawable/stat_notify_chat"
-            tools:ignore="SpeakableTextPresentCheck" />
+<!--        <ImageButton-->
+<!--            android:id="@+id/imageButton2"-->
+<!--            android:layout_width="59dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:background="#00283593"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.925"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.039"-->
+<!--            app:srcCompat="@android:drawable/stat_notify_chat"-->
+<!--            tools:ignore="SpeakableTextPresentCheck" />-->
 
-        <EditText
-            android:id="@+id/editTextTextMultiLine"
-            android:layout_width="323dp"
-            android:layout_height="249dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:ems="10"
-            android:gravity="start|top"
-            android:inputType="textMultiLine"
-            android:text="Welcome to the EGS Athlone webpage   With close to fifty members, we are one of the biggest societies in Ericsson Athlone.  We have an excellent fixture list and a great history over the last 30+ years.  Please use the navigation menu to browse the site.   If you have any suggestions or improvements for the site please let a committee member know.  New female or male members of any golfing level are most welcome! If you would like to join please contact a committee member "
-            android:focusable="false"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.6"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.615" />
+<!--        <EditText-->
+<!--            android:id="@+id/editTextTextMultiLine"-->
+<!--            android:layout_width="323dp"-->
+<!--            android:layout_height="249dp"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:ems="10"-->
+<!--            android:gravity="start|top"-->
+<!--            android:inputType="textMultiLine"-->
+<!--            android:text="Welcome to the EGS Athlone webpage   With close to fifty members, we are one of the biggest societies in Ericsson Athlone.  We have an excellent fixture list and a great history over the last 30+ years.  Please use the navigation menu to browse the site.   If you have any suggestions or improvements for the site please let a committee member know.  New female or male members of any golfing level are most welcome! If you would like to join please contact a committee member "-->
+<!--            android:textAlignment="center"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.6"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.615" />-->
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="154dp"
-            android:layout_height="132dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/microsoftteams_image__1_" />
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView"-->
+<!--            android:layout_width="154dp"-->
+<!--            android:layout_height="132dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="1.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:srcCompat="@drawable/microsoftteams_image__1_" />-->
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="248dp"
-            android:layout_height="125dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.257"
-            app:srcCompat="@drawable/golf_image" />
+<!--        <ImageView-->
+<!--            android:id="@+id/imageView2"-->
+<!--            android:layout_width="248dp"-->
+<!--            android:layout_height="125dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.257"-->
+<!--            app:srcCompat="@drawable/golf_image" />-->
 
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="94dp"
-            android:layout_height="52dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginBottom="48dp"
-            android:background="#D61304"
-            android:text="Join"
-            android:textColor="#FBE9E7"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.147"
-            app:layout_constraintStart_toStartOf="parent" />
+<!--        <CheckBox-->
+<!--            android:id="@+id/checkBox"-->
+<!--            android:layout_width="94dp"-->
+<!--            android:layout_height="52dp"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginBottom="48dp"-->
+<!--            android:background="#D61304"-->
+<!--            android:text="Join"-->
+<!--            android:textColor="#FBE9E7"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.147"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
 
+<!--        <ImageButton-->
+<!--            android:id="@+id/imageButton"-->
+<!--            android:layout_width="102dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:background="#00FFFFFF"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.631"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.039"-->
+<!--            app:srcCompat="@drawable/timetable2" />-->
 
-        <ImageButton
-            android:id="@+id/imageButton"
-            android:layout_width="102dp"
-            android:layout_height="48dp"
-            android:background="#00FFFFFF"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.051"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.039"
-            app:srcCompat="@drawable/timetable2"
-            tools:ignore="SpeakableTextPresentCheck" />
+<!--        <TextView-->
+<!--            android:id="@+id/textView2"-->
+<!--            android:layout_width="225dp"-->
+<!--            android:layout_height="41dp"-->
+<!--            android:onClick="browser"-->
+<!--            android:text="Click her to view website"-->
+<!--            android:textSize="16sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.564"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.811" />-->
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="225dp"
-            android:layout_height="41dp"
-            android:onClick="browser"
-            android:text="Click her to view website"
-            android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.564"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.811" />
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    <Button-->
+<!--        android:id="@+id/Out"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Log Out"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/textView"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        android:onClick="logout"/>-->
 
-</RelativeLayout> 
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+</RelativeLayout>
