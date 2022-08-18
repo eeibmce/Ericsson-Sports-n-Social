@@ -1,62 +1,31 @@
 package com.example.sportsnspocialapp;
 
-import android.os.Bundle;
-import android.view.WindowManager;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle; 
-import android.text.Html;
-import android.text.method.LinkMovementMethod;
+import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 //import androidx.navigation.fragment.findNavController;
 
 
 public class MainActivity extends AppCompatActivity {
     private Button button;
-    //ImageButton btnAdd = (ImageButton)findViewById(R.id.imageButton2);
- 
 
-//    //Variables
-//    Animation topAnim, bottomAnim;
-//    ImageView imageView3;
-//    TextView textView, textView2;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_main);
 
-//        //Animations
-//        topAnim = AnimationUtils.loadAnimation(this,R.anim.top_animation);
-//        bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_animation);
-//
-//        //Hooks
-//        imageView3 = findViewById(R.id.imageView3);
-//        textView = findViewById(R.id.textView);
-//        textView2 = findViewById(R.id.textView2);
-//
-//        imageView3.setAnimation(topAnim);
-//        textView.setAnimation(bottomAnim);
-//        textView2.setAnimation(bottomAnim);
-
-        super.onCreate(savedInstanceState); 
         setContentView(R.layout.fragment_home);
 
-//        Button contact = (Button) findViewById(R.id.button);
-//        String linkText = "<a href='https://www.ericsson.com/en/contact'>Contact Us</a>";
-//        contact.setText(Html.fromHtml(linkText));
-//        contact.setMovementMethod(LinkMovementMethod.getInstance());
-//
-
-        ImageButton btnAddPool = (ImageButton)findViewById(R.id.imageButtonPool);
+        ImageButton btnAddPool = (ImageButton) findViewById(R.id.imageButtonPool);
 
         btnAddPool.setOnClickListener(new View.OnClickListener() {
 
@@ -66,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton btnAddFootball = (ImageButton)findViewById(R.id.imageButtonFootball);
+        ImageButton btnAddFootball = (ImageButton) findViewById(R.id.imageButtonFootball);
 
         btnAddFootball.setOnClickListener(new View.OnClickListener() {
 
@@ -76,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton btnAddGolf = (ImageButton)findViewById(R.id.imageButton2);
+        ImageButton btnAddGolf = (ImageButton) findViewById(R.id.imageButton2);
 
         btnAddGolf.setOnClickListener(new View.OnClickListener() {
 
@@ -86,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton btnAddBasketball = (ImageButton)findViewById(R.id.imageButtonBasketball);
+        ImageButton btnAddBasketball = (ImageButton) findViewById(R.id.imageButtonBasketball);
 
         btnAddBasketball.setOnClickListener(new View.OnClickListener() {
 
@@ -97,52 +66,39 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    public void openPoolActivity(){
+    public void openPoolActivity() {
         Intent intent = new Intent(this, PoolActivity.class);
         startActivity(intent);
     }
-    public void openGolfActivity(){
+
+    public void openGolfActivity() {
         Intent intent = new Intent(this, GolfActivity.class);
         startActivity(intent);
     }
 
-    public void openFootballActivity(){
+    public void openFootballActivity() {
         Intent intent = new Intent(this, FootballActivity.class);
         startActivity(intent);
     }
 
-    public void openBasketballActivity(){
+    public void openBasketballActivity() {
         Intent intent = new Intent(this, BasketballActivity.class);
         startActivity(intent);
     }
 
-    public void browser(View view){
-            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ericsson.com/en/contact"));
-            startActivity(browserIntent);
+    public void browser(View view) {
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.ericsson.com/en/contact"));
+        startActivity(browserIntent);
     }
 
-}
 
- 
-        setContentView(R.layout.activity_main);
-        System.out.println("We are in onCreate in Main Activity");
-        button = (ImageButton) findViewById(R.id.imageButton2);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openChat_page();
-            }
-        });
-    }
-
-    public void openChat_page(){
+    public void openChat_page() {
         Intent intent = new Intent(this, Chat_page.class);
         startActivity(intent);
         setContentView(R.layout.activity_chat_page);
     }
-    public void browser(View view){
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/egsathlone/home"));
-        startActivity(browserIntent);
-    }
 
-} 
+
+
+
+}

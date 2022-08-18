@@ -1,8 +1,9 @@
 package com.example.sportsnspocialapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class PoolActivity extends AppCompatActivity {
 
@@ -10,5 +11,9 @@ public class PoolActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pool);
+    }
+    public void openRaffle() {
+        Intent intent = new Intent(this, Raffle.class);
+        startActivity(intent);
     }
 }
