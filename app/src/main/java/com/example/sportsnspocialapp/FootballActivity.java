@@ -55,5 +55,5 @@ public class FootballActivity extends AppCompatActivity {
         startActivity(browserIntent);
 
     }
-
+    //
 }
