@@ -13,12 +13,12 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="435dp"
-            android:layout_height="49dp"
+            android:layout_width="424dp"
+            android:layout_height="90dp"
             android:layout_marginTop="16dp"
             android:background="#283593"
             android:fontFamily="sans-serif-smallcaps"
-            android:text="Ericsson Golf Society"
+            android:text="Ericsson Table Tennis Club"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="34sp"
@@ -26,7 +26,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.121" />
+            app:layout_constraintVertical_bias="0.124" />
 
         <ImageButton
             android:id="@+id/imageButton2"
@@ -117,10 +117,11 @@
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.54"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.305"
-            app:srcCompat="@drawable/golf_image" />
+            app:layout_constraintVertical_bias="0.302"
+            app:srcCompat="@drawable/tabletennis" />
 
         <EditText
             android:id="@+id/editTextTextMultiLine5"
@@ -130,13 +131,13 @@
             android:gravity="start|top"
             android:inputType="textMultiLine"
             android:scrollbars="vertical"
-            android:text=" Welcome to the EGS Athlone webpage   With close to fifty members, we are one of the biggest societies in Ericsson Athlone.  We have an excellent fixture list and a great history over the last 30+ years.  Please use the navigation menu to browse the site.   If you have any suggestions or improvements for the site please let a committee member know.  New female or male members of any golfing level are most welcome! If you would like to join please contact a committee member listed on the 'Join' page"
+            android:text="Welcome to the Table Tennis Club.The club’s main focus is introducing new members to the game, improving your skills and most of all, having fun. It is open to all levels, whether you’re experienced or just a beginner."
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.645"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.679"
+            app:layout_constraintVertical_bias="0.638"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

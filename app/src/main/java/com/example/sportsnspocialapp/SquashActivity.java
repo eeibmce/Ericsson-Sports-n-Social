@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class FootballActivity extends AppCompatActivity {
+public class SquashActivity extends AppCompatActivity {
     private ImageButton button;
     private ImageButton button2;
 
@@ -51,7 +51,7 @@ public class FootballActivity extends AppCompatActivity {
     }
 
     public void browser(View view) {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/eafc05"));
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://confluence-oss.seli.wh.rnd.internal.ericsson.com/display/SPSOAT/Squash+Club"));
         startActivity(browserIntent);
 
     }

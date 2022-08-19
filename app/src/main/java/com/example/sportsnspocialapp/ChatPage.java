@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class Chat_page extends AppCompatActivity {
+public class ChatPage extends AppCompatActivity {
     private Button button;
 
     @Override
