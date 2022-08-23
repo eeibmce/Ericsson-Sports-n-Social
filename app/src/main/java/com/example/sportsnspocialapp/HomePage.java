@@ -3,6 +3,7 @@ package com.example.sportsnspocialapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -145,6 +146,18 @@ public class HomePage extends AppCompatActivity {
 //        end part 3
 
 
+
 //    end
+
     }
+
+    //        contact us button start
+
+    public void browser(View view){
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://sites.google.com/view/egsathlone/home"));
+        startActivity(browserIntent);
+    }
+
+//    contact us button end
+
 }

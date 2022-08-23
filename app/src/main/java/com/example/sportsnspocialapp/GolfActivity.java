@@ -27,9 +27,10 @@ public class GolfActivity extends AppCompatActivity {
     private ImageButton button;
     private ImageButton button2;
     String golfJoinClub;
-    CheckBox golfJoin;
+    Button golfJoin;
     FirebaseFirestore fStore;
     FirebaseAuth fAuth;
+    boolean myGolfClubStatus = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,30 +65,57 @@ public class GolfActivity extends AppCompatActivity {
             }
         });
 
-        golfJoin = (CheckBox) findViewById(R.id.checkBox);
+        golfJoin = (Button) findViewById(R.id.checkBox);
         fStore = FirebaseFirestore.getInstance();
         fAuth = FirebaseAuth.getInstance();
         golfJoinClub = "Golf Club";
 //
         golfJoin.setOnClickListener(view -> {
-            Toast.makeText(GolfActivity.this, "You have joined this club!", Toast.LENGTH_LONG).show();
-            String UserEmail = fAuth.getCurrentUser().getEmail();
-            fStore.collection("users")
-                    .whereEqualTo("email", UserEmail)
-                    .get()
-                    .addOnCompleteListener(task -> {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
+            if (myGolfClubStatus == true) {
+                myGolfClubStatus = false;
+                golfJoin.setText("Leave");
+                Toast.makeText(GolfActivity.this, "You have joined this club!", Toast.LENGTH_LONG).show();
+                String UserEmail = fAuth.getCurrentUser().getEmail();
+                fStore.collection("users")
+                        .whereEqualTo("email", UserEmail)
+                        .get()
+                        .addOnCompleteListener(task -> {
+                            if (task.isSuccessful()) {
+                                for (QueryDocumentSnapshot document : task.getResult()) {
 
-                                Map<String, Object> user = new HashMap<>();
-                                user.put("clubs", golfJoinClub);
-                                fStore.collection("users").document(document.getId())
-                                        .set(user, SetOptions.merge());
+                                    Map<String, Object> user = new HashMap<>();
+                                    user.put("clubs", golfJoinClub);
+                                    fStore.collection("users").document(document.getId())
+                                            .update("Golf Club", "Member");
+                                }
+                            } else {
+                                Log.d("[]", "Error getting documents: ", task.getException());
                             }
-                        } else {
-                            Log.d("[]", "Error getting documents: ", task.getException());
-                        }
-                    });
+                        });
+            }
+            else {
+                myGolfClubStatus = true;
+                golfJoin.setText("Join");
+                Toast.makeText(GolfActivity.this, "You have joined this club!", Toast.LENGTH_LONG).show();
+                String UserEmail = fAuth.getCurrentUser().getEmail();
+                fStore.collection("users")
+                        .whereEqualTo("email", UserEmail)
+                        .get()
+                        .addOnCompleteListener(task -> {
+                            if (task.isSuccessful()) {
+                                for (QueryDocumentSnapshot document : task.getResult()) {
+
+                                    Map<String, Object> user = new HashMap<>();
+                                    user.put("clubs", golfJoinClub);
+                                    fStore.collection("users").document(document.getId())
+                                            .update("Golf Club", "Not a Member");
+                                }
+                            } else {
+                                Log.d("[]", "Error getting documents: ", task.getException());
+                            }
+                        });
+            }
+
         });
     }
 

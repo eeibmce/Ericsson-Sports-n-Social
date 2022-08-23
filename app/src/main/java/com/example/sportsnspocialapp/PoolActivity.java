@@ -11,11 +11,21 @@ import android.widget.Toast;
 
 public class PoolActivity extends AppCompatActivity  {
     boolean myIDDisplayed = false;
+    Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pool);
+        back = findViewById(R.id.back);
+
+        back= findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), HomePage.class));
+            }
+        });
 
         EditText editTextCode = (EditText) findViewById(R.id.editTextInvite);
 
@@ -37,12 +47,13 @@ public class PoolActivity extends AppCompatActivity  {
             @Override
             public void onClick(View view) {
 
-                btnID.setText("Show ID");
+//                btnID.setText("Show ID");
 
                 if (myIDDisplayed == true) {
                     myIDDisplayed = false;
                     btnID.setText("Show ID");
-                } else {
+                }
+                else {
                     myIDDisplayed = true;
                     btnID.setText("My ID");
                 }
