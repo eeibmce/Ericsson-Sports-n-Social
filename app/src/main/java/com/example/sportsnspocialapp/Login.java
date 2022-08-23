@@ -84,7 +84,8 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 System.out.println("GOING TO REGISTER");
-                startActivity(new Intent(getApplicationContext(), Register.class));
+                Intent sendUser = new Intent(Login.this, HomeFragment.class);
+                startActivity(sendUser);
 
             }
         });

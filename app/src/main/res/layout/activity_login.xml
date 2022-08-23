@@ -45,6 +45,7 @@
         android:id="@+id/textView5"
         android:layout_width="357dp"
         android:layout_height="106dp"
+        android:fontFamily="@font/ericssoncapital"
         android:text="Sports and Social App"
         android:textAlignment="center"
         android:textColor="#FAF7F7"

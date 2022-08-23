@@ -64,6 +64,7 @@ public class Register extends AppCompatActivity {
             public void onClick(View view) {
                 String email = mEmail.getText().toString().trim();
                 String password = mPassword.getText().toString().trim();
+                String fullName = mFullName.getText().toString();
 
                 if (TextUtils.isEmpty(email)) {
                     mEmail.setError("Email is required.");
@@ -102,33 +103,30 @@ public class Register extends AppCompatActivity {
                                 }
                             });
 
-//
+
 
 
                             Toast.makeText(Register.this, "User Created.", Toast.LENGTH_SHORT).show();
                             userID = fAuth.getCurrentUser().getUid();
                             DocumentReference documentReference = fStore.collection("users").document(userID);
+                            Map<String,Object> user = new HashMap<>();
 
 
-                            Map<String, Object> user = new HashMap<>();
-                            user.put("fName", mFullName);
+                            user.put("fName", fullName);
                             user.put("email", email);
-                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void unused) {
+                            user.put("Skill Rating", 1000);
+
+                            documentReference.set(user).addOnSuccessListener((OnSuccessListener) (aVoid) -> {
                                     Log.d(TAG, "onSuccess: user Profile is created for " + userID);
-                                    documentReference.set(user).addOnFailureListener(new OnFailureListener() {
-                                        @Override
-                                        public void onFailure(@NonNull Exception e) {
-                                            Log.d(TAG, "onFailure: " + e);
-                                        }
-                                    });
-
-
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Log.d(TAG, "onFailure: " + e);
                                 }
-
-
                             });
+                            Intent sendUser = new Intent(Register.this, HomeFragment.class);
+                            sendUser.putExtra("UserID", userID );
+                            startActivity(sendUser);
 
                         } else {
                             Toast.makeText(Register.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
