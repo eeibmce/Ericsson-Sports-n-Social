@@ -10,14 +10,7 @@
         tools:layout="@layout/fragment_home">
 
     </fragment>
-    <action
-        android:id="@+id/action_HomeFragment_to_PoolFragment"
-        app:destination="@id/PoolFragment" />
-    <fragment
-        android:id="@+id/PoolFragment"
-        android:name="com.example.sportsnspocialapp.PoolFragment"
-        android:label="fragment_pool"
-        tools:layout="@layout/activity_pool">
-    </fragment>
+
+
 
 </navigation>
