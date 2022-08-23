@@ -49,6 +49,7 @@ public class Raffle extends AppCompatActivity {
             public void onClick(View view) {
                 raffleNames.clear();
                 //        For this method I want to completely reset the raffle so a new one can be done
+                //        I would also like it to reset the congratulations message
 
             }
         });
@@ -59,10 +60,12 @@ public class Raffle extends AppCompatActivity {
             public void onClick(View view) {
                 //For this method I want it to run the raffle
                 //and randomly select a name from the array of the names of people who have entered
+                //I would also like it to make the below text box visible and display the name of the winner
+                //At the same time i would like a temporary animation show up and have a sound effect
                 Random random = new Random();
                 index = random.nextInt(raffleNames.size());
                 System.out.println(raffleNames.get(index));
-                displayToast();
+//                displayToast();
             }
         });
 
@@ -70,12 +73,12 @@ public class Raffle extends AppCompatActivity {
 
 
     }
-    public  void displayToast() {
-        System.out.println(raffleNames);
-        System.out.println(raffleNames.get(index));
-        Toast.makeText(Raffle.this, "Congratulations " + raffleNames.get(index), Toast.LENGTH_LONG).show();
-
-
-    }
+//    public  void displayToast() {
+//        System.out.println(raffleNames);
+//        System.out.println(raffleNames.get(index));
+//        Toast.makeText(Raffle.this, "Congratulations " + raffleNames.get(index), Toast.LENGTH_LONG).show();
+//
+//
+//    }
 }
 
