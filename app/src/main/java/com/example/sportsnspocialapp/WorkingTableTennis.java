@@ -30,6 +30,7 @@ public class WorkingTableTennis extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), HomePage.class));
             }
         });
+
         System.out.println("We are in onCreate in Main Activity");
         TextView scrollingTool = findViewById(R.id.editTextTextMultiLine5);
         scrollingTool.setMovementMethod(new ScrollingMovementMethod());
