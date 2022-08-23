@@ -27,6 +27,9 @@
             android:name=".TagRugbyActivity"
             android:exported="false" />
         <activity
+            android:name=".Raffle"
+            android:exported="false" />
+        <activity
             android:name=".SquashActivity"
             android:exported="false" />
         <activity

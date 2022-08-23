@@ -134,13 +134,13 @@ public class HomePage extends AppCompatActivity {
             }
         });
 
-//        raffle.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                startActivity(new Intent(getApplicationContext(), Raffle.class));
-//
-//            }
-//        });
+        raffle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Raffle.class));
+
+            }
+        });
 
 //        end part 3
 

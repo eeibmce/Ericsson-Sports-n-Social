@@ -1,5 +1,6 @@
 package com.example.sportsnspocialapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,7 +20,7 @@ public class Raffle extends AppCompatActivity {
 
     Button enterRaffle;
     TextView tv;
-    Button reset;
+    Button reset, back;
     Button run;
 
     int index = 0;
@@ -32,6 +33,7 @@ public class Raffle extends AppCompatActivity {
         tv = findViewById(R.id.textView7);
         reset = findViewById(R.id.resetButton);
         run = findViewById(R.id.runButton);
+        back = findViewById(R.id.back);
 
         enterRaffle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +45,14 @@ public class Raffle extends AppCompatActivity {
             }
         });
 
+
+        back= findViewById(R.id.back);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), HomePage.class));
+            }
+        });
 
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
