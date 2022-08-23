@@ -16,6 +16,26 @@
         android:theme="@style/Theme.SportsNSocialAPP"
         tools:targetApi="31">
         <activity
+            android:name=".WorkingTableTennis"
+            android:exported="false" />
+        <activity
+            android:name=".BadmintonActivity"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".CricketActivity" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".TagRugbyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Raffle"
+            android:exported="false" />
+        <activity
+            android:name=".SquashActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GaaActivity"
+            android:exported="false" />
+        <activity
             android:name=".HomePage"
             android:exported="false" />
         <activity
@@ -26,10 +46,9 @@
             android:exported="false" />
         <activity
             android:name=".ContactActivity"
-            android:exported="false" />
-        <activity
-            android:name=".BasketballActivity"
-            android:exported="false" />
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".GaaActivity" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".GolfActivity"
             android:exported="false" />
@@ -43,25 +62,38 @@
             android:name=".Calendar"
             android:exported="false" />
         <activity
-            android:name=".Chat_page"
+            android:name=".ChatPage"
             android:exported="false" />
         <activity
             android:name=".Login"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".SplashActivity"
             android:exported="true">
-            android:theme = "@style/Theme.SportsNSocialAPP1>
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" />
+                <data android:scheme="https" />
+                <data android:host="www.example.com" />
+                <data android:host="mobile.example.com" />
+            </intent-filter>
+ 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+
             </intent-filter>
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
+
     </application>
+
 
 </manifest>

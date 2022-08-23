@@ -46,7 +46,7 @@
 
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/imageButtonGolf"
             android:layout_width="0dp"
             android:layout_height="148dp"
             android:layout_marginStart="205dp"
@@ -171,10 +171,10 @@
             android:text="Golf"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-            app:layout_constraintEnd_toEndOf="@+id/imageButton2"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtonGolf"
+            app:layout_constraintEnd_toEndOf="@+id/imageButtonGolf"
             app:layout_constraintStart_toEndOf="@+id/imageButtonFootball"
-            app:layout_constraintTop_toTopOf="@+id/imageButton2" />
+            app:layout_constraintTop_toTopOf="@+id/imageButtonGolf" />
 
         <TextView
             android:id="@+id/textView5"

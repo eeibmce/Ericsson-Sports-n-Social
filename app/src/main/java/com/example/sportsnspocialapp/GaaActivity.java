@@ -17,23 +17,24 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.SetOptions;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class FootballActivity extends AppCompatActivity {
+public class GaaActivity extends AppCompatActivity {
     Button back;
     private ImageButton button;
     private ImageButton button2;
-    String soccerJoinClub;
-    CheckBox soccerJoin;
+    String gaaJoinClub;
+    CheckBox gaaJoin;
     FirebaseFirestore fStore;
     FirebaseAuth fAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_football);
+        setContentView(R.layout.activity_gaa);
 
         back= findViewById(R.id.back);
 
@@ -62,8 +63,13 @@ public class FootballActivity extends AppCompatActivity {
                 openCalendar();
             }
         });
-        soccerJoin.setOnClickListener(view -> {
-            Toast.makeText(FootballActivity.this, "You have joined this club!", Toast.LENGTH_LONG).show();
+        gaaJoin = (CheckBox) findViewById(R.id.checkBox);
+        fStore = FirebaseFirestore.getInstance();
+        fAuth = FirebaseAuth.getInstance();
+        gaaJoinClub = "Member";
+//
+        gaaJoin.setOnClickListener(view -> {
+            Toast.makeText(GaaActivity.this, "You have joined this club!", Toast.LENGTH_LONG).show();
             String UserEmail = fAuth.getCurrentUser().getEmail();
             fStore.collection("users")
                     .whereEqualTo("email", UserEmail)
@@ -73,9 +79,9 @@ public class FootballActivity extends AppCompatActivity {
                             for (QueryDocumentSnapshot document : task.getResult()) {
 
                                 Map<String, Object> user = new HashMap<>();
-                                user.put("Soccer Club", soccerJoinClub);
+                                user.put("GAA Club", gaaJoinClub);
                                 fStore.collection("users").document(document.getId())
-                                        .update("Soccer Club", "Member");
+                                        .update("GAA Club", "Member");
                             }
                         } else {
                             Log.d("[]", "Error getting documents: ", task.getException());
@@ -97,9 +103,9 @@ public class FootballActivity extends AppCompatActivity {
     }
 
     public void browser(View view) {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/eafc05"));
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/EricInterfirmsGaa/?ref=page_internal"));
         startActivity(browserIntent);
 
     }
-    //
+
 }

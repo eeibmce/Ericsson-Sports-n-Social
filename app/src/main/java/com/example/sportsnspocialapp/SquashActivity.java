@@ -21,19 +21,19 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import java.util.HashMap;
 import java.util.Map;
 
-public class FootballActivity extends AppCompatActivity {
+public class SquashActivity extends AppCompatActivity {
     Button back;
     private ImageButton button;
     private ImageButton button2;
-    String soccerJoinClub;
-    CheckBox soccerJoin;
+    String squashJoinClub;
+    CheckBox squashJoin;
     FirebaseFirestore fStore;
     FirebaseAuth fAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_football);
+        setContentView(R.layout.activity_squash);
 
         back= findViewById(R.id.back);
 
@@ -44,7 +44,7 @@ public class FootballActivity extends AppCompatActivity {
             }
         });
 
-        System.out.println("We are in onCreate in Main Activity");
+
         TextView scrollingTool = findViewById(R.id.editTextTextMultiLine5);
         scrollingTool.setMovementMethod(new ScrollingMovementMethod());
 
@@ -62,8 +62,13 @@ public class FootballActivity extends AppCompatActivity {
                 openCalendar();
             }
         });
-        soccerJoin.setOnClickListener(view -> {
-            Toast.makeText(FootballActivity.this, "You have joined this club!", Toast.LENGTH_LONG).show();
+        squashJoin = (CheckBox) findViewById(R.id.checkBox);
+        fStore = FirebaseFirestore.getInstance();
+        fAuth = FirebaseAuth.getInstance();
+        squashJoinClub = "Member";
+//
+        squashJoin.setOnClickListener(view -> {
+            Toast.makeText(SquashActivity.this, "You have joined this club!", Toast.LENGTH_LONG).show();
             String UserEmail = fAuth.getCurrentUser().getEmail();
             fStore.collection("users")
                     .whereEqualTo("email", UserEmail)
@@ -73,9 +78,9 @@ public class FootballActivity extends AppCompatActivity {
                             for (QueryDocumentSnapshot document : task.getResult()) {
 
                                 Map<String, Object> user = new HashMap<>();
-                                user.put("Soccer Club", soccerJoinClub);
+                                user.put("Squash Club", squashJoinClub);
                                 fStore.collection("users").document(document.getId())
-                                        .update("Soccer Club", "Member");
+                                        .update("Squash Club", "Member");
                             }
                         } else {
                             Log.d("[]", "Error getting documents: ", task.getException());
@@ -97,9 +102,9 @@ public class FootballActivity extends AppCompatActivity {
     }
 
     public void browser(View view) {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/eafc05"));
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://confluence-oss.seli.wh.rnd.internal.ericsson.com/display/SPSOAT/Squash+Club"));
         startActivity(browserIntent);
 
     }
-    //
+
 }

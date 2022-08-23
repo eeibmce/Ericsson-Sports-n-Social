@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundeoin"
-    tools:context=".GolfActivity">
+    tools:context=".TableTennisActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,15 +13,15 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="450dp"
-            android:layout_height="78dp"
+            android:layout_width="424dp"
+            android:layout_height="90dp"
             android:layout_marginTop="16dp"
             android:background="#283593"
             android:fontFamily="sans-serif-smallcaps"
-            android:text="Ericsson Athlone Football Club"
+            android:text="Ericsson Table Tennis Club"
             android:textAlignment="center"
             android:textColor="@color/white"
-            android:textSize="30sp"
+            android:textSize="34sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -121,7 +121,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.302"
-            app:srcCompat="@drawable/football" />
+            app:srcCompat="@drawable/tabletennis" />
 
         <EditText
             android:id="@+id/editTextTextMultiLine5"
@@ -131,7 +131,7 @@
             android:gravity="start|top"
             android:inputType="textMultiLine"
             android:scrollbars="vertical"
-            android:text="The club was established in March 2005. We play in CCFL division 3B. The club is mostly made up of Ericsson employees but we have a few externals and ex-Ericsson. We train Tuesday and Thursday at 5.30 on willow park astro, new players welcome "
+            android:text="Welcome to the Table Tennis Club.The club’s main focus is introducing new members to the game, improving your skills and most of all, having fun. It is open to all levels, whether you’re experienced or just a beginner."
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.645"
