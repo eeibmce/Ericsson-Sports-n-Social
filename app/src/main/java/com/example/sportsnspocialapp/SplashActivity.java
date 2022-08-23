@@ -56,7 +56,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
 
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, FootballActivity.class);
+                Intent intent = new Intent(SplashActivity.this, HomePage.class);
                 startActivity(intent);
                 finish();
             }

@@ -11,19 +11,18 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class TagRugbyActivity extends AppCompatActivity {
+public class WorkingTableTennis extends AppCompatActivity {
+
     Button back;
     private ImageButton button;
     private ImageButton button2;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tag_rugby);
+        setContentView(R.layout.activity_tabletennis);
 
-        back = findViewById(R.id.back);
-//
+        back= findViewById(R.id.back);
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,7 +30,6 @@ public class TagRugbyActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), HomePage.class));
             }
         });
-
         System.out.println("We are in onCreate in Main Activity");
         TextView scrollingTool = findViewById(R.id.editTextTextMultiLine5);
         scrollingTool.setMovementMethod(new ScrollingMovementMethod());
@@ -65,9 +63,8 @@ public class TagRugbyActivity extends AppCompatActivity {
     }
 
     public void browser(View view) {
-        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/EricTagRugby"));
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://confluence-oss.seli.wh.rnd.internal.ericsson.com/display/SPSOAT/Squash+Club"));
         startActivity(browserIntent);
 
     }
-
 }
