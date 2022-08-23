@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -100,12 +101,30 @@ public class LoseActivity extends AppCompatActivity {
                             System.out.println("Updated");
                         }
                     });
-                    //Own Skill Calculation
 
+
+                    //Setting skill rating textview
+                    TextView textSkill = findViewById(R.id.textViewSkillUser);
+                    textSkill.setText(String.valueOf(skillRatingNewOpp));
+
+
+                    //Button to Finish
+                    Button buttonFinish = findViewById(R.id.buttonFinish);
+
+                    buttonFinish.setOnClickListener(new View.OnClickListener() {
+
+                        @Override
+                        public void onClick(View view) {
+
+                            Intent intent = new Intent(LoseActivity.this, PoolActivity.class);
+                            startActivity(intent);
+                        }
+                    });
 
                 }
             }
         });
+
 
 
     }

@@ -118,15 +118,16 @@ public class Register extends AppCompatActivity {
 
                             documentReference.set(user).addOnSuccessListener((OnSuccessListener) (aVoid) -> {
                                     Log.d(TAG, "onSuccess: user Profile is created for " + userID);
+                                Intent intent = new Intent(Register.this, HomeFragment.class);
+
+                                startActivity(intent);
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
                                     Log.d(TAG, "onFailure: " + e);
                                 }
                             });
-                            Intent sendUser = new Intent(Register.this, HomeFragment.class);
-                            sendUser.putExtra("UserID", userID );
-                            startActivity(sendUser);
+
 
                         } else {
                             Toast.makeText(Register.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
