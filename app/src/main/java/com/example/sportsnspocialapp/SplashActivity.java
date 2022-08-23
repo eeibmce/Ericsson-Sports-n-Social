@@ -18,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
 //    ImageView imageView3;
 //    TextView textView, textView2;
 
-    private static int SPLASH_SCREEN_TIMEOUT = 2000;
+    private static final int SPLASH_SCREEN_TIMEOUT = 2000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
