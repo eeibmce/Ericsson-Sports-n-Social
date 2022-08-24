@@ -62,32 +62,32 @@
 
 
         <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="148dp"
-            android:layout_height="128dp"
-            android:contentDescription="TODO"
-            android:scaleType="centerCrop"
+            android:id="@+id/imageView5"
+            android:layout_width="91dp"
+            android:layout_height="77dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.984"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintVertical_bias="0.99"
             app:srcCompat="@drawable/essalogo" />
 
-        <CheckBox
+        <Button
             android:id="@+id/checkBox"
-            android:layout_width="98dp"
-            android:layout_height="62dp"
-            android:background="#C62828"
+            android:layout_width="85dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#249C1F"
             android:text="Join"
-            android:textSize="24sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.083"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.967" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/textView2"
@@ -123,22 +123,34 @@
             app:layout_constraintVertical_bias="0.302"
             app:srcCompat="@drawable/gaa" />
 
-        <EditText
+        <TextView
             android:id="@+id/editTextTextMultiLine5"
             android:layout_width="267dp"
             android:layout_height="207dp"
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
-            android:scrollbars="vertical"
             android:text="The club was established in March 2005. We play in CCFL division 3B. The club is mostly made up of Ericsson employees but we have a few externals and ex-Ericsson. We train Tuesday and Thursday at 5.30 on willow park astro, new players welcome "
+            android:scrollbars="vertical"
+            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.645"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.638"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+            app:layout_constraintVertical_bias="0.647"
+            tools:ignore="RtlCompat,SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="96dp"
+            android:layout_height="78dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.033"
+            app:srcCompat="@drawable/ericssonlogo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

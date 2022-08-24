@@ -43,7 +43,9 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         mFullName = findViewById(R.id.FullName);
+        String sFullName = mFullName.getText().toString();
         mEmail = findViewById(R.id.Email);
+        String sEmail = mEmail.getText().toString();
         mPassword = findViewById(R.id.Password);
         mRegister = findViewById(R.id.Register);
         mLOG = findViewById(R.id.goLog);
@@ -103,41 +105,36 @@ public class Register extends AppCompatActivity {
                             });
 
 //
-
+                            Map<String, Object> user = new HashMap<>();
+                            user.put("Full Name", sFullName);
+                            user.put("email", "awesome3");
 
                             Toast.makeText(Register.this, "User Created.", Toast.LENGTH_SHORT).show();
                             userID = fAuth.getCurrentUser().getUid();
-                            DocumentReference documentReference = fStore.collection("users").document(userID);
-
-
-                            Map<String, Object> user = new HashMap<>();
-                            user.put("fName", mFullName);
-                            user.put("email", email);
-                            documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                @Override
-                                public void onSuccess(Void unused) {
-                                    Log.d(TAG, "onSuccess: user Profile is created for " + userID);
-                                    documentReference.set(user).addOnFailureListener(new OnFailureListener() {
+                            fStore.collection("users").document(userID)
+                                    .set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        @Override
+                                        public void onSuccess(Void aVoid) {
+                                            Log.d(TAG, "DocumentSnapshot successfully written!");
+                                        }
+                                    })
+                                    .addOnFailureListener(new OnFailureListener() {
                                         @Override
                                         public void onFailure(@NonNull Exception e) {
-                                            Log.d(TAG, "onFailure: " + e);
+                                            Log.w(TAG, "Error writing document", e);
                                         }
                                     });
 
-
-                                }
-
-
-                            });
 
                         } else {
                             Toast.makeText(Register.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
-                });
+                    });
+                }
 
 
-            }
-        });
+            });
+
     }
 }

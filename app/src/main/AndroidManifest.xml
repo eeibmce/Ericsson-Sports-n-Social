@@ -46,7 +46,7 @@
             android:name=".GaaActivity"
             android:exported="false" />
         <activity
-            android:name=".GolfActivity"
+            android:name=".SplashActivity"
             android:exported="false" />
         <activity
             android:name=".FootballActivity"
@@ -64,7 +64,7 @@
             android:name=".Login"
             android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".GolfActivity"
             android:exported="true">
             android:theme = "@style/Theme.SportsNSocialAPP1>
             <intent-filter>

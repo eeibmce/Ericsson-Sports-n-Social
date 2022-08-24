@@ -44,6 +44,18 @@
             app:srcCompat="@android:drawable/stat_notify_chat"
             tools:ignore="SpeakableTextPresentCheck" />
 
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="96dp"
+            android:layout_height="78dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.033"
+            app:srcCompat="@drawable/ericssonlogo" />
+
 
         <ImageButton
             android:id="@+id/imageButton3"
@@ -62,32 +74,32 @@
 
 
         <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="148dp"
-            android:layout_height="128dp"
-            android:contentDescription="TODO"
-            android:scaleType="centerCrop"
+            android:id="@+id/imageView5"
+            android:layout_width="91dp"
+            android:layout_height="77dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.984"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintVertical_bias="0.99"
             app:srcCompat="@drawable/essalogo" />
 
-        <CheckBox
+        <Button
             android:id="@+id/checkBox"
-            android:layout_width="98dp"
-            android:layout_height="62dp"
-            android:background="#C62828"
+            android:layout_width="85dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#249C1F"
             android:text="Join"
-            android:textSize="24sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.083"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.967" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/textView2"
@@ -123,7 +135,7 @@
             app:layout_constraintVertical_bias="0.302"
             app:srcCompat="@drawable/badminton" />
 
-        <EditText
+        <TextView
             android:id="@+id/editTextTextMultiLine5"
             android:layout_width="267dp"
             android:layout_height="207dp"
@@ -132,13 +144,13 @@
             android:inputType="textMultiLine"
             android:scrollbars="vertical"
             android:text="Welcome to the Badminton club. To join E-mail any of the Committee members for details on membership  (New membership forms to be signed by members for 2022) : Members list (New from Jan 2022)"
+            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.645"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.638"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+            app:layout_constraintVertical_bias="0.647"
+            tools:ignore="RtlCompat,SpeakableTextPresentCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
