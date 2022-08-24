@@ -115,6 +115,7 @@ public class Register extends AppCompatActivity {
                             user.put("fName", fullName);
                             user.put("email", email);
                             user.put("Skill Rating", 1000);
+                            user.put("In Game", false);
 
                             documentReference.set(user).addOnSuccessListener((OnSuccessListener) (aVoid) -> {
                                     Log.d(TAG, "onSuccess: user Profile is created for " + userID);
