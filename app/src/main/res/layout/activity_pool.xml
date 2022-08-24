@@ -30,7 +30,7 @@
         <!--            />-->
 
         <Button
-            android:id="@+id/buttonPlay"
+            android:id="@+id/buttonHost"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="150dp"
@@ -123,19 +123,87 @@
             app:popupTheme="@style/Theme.SportsNSpocialAPP.PopupOverlay" />
 
         <Button
-            android:id="@+id/buttonJoinHost"
+            android:id="@+id/buttonJoin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="70dp"
+            android:fontFamily="@font/ericssoncapital"
+            android:text="Join Another User's Game"
+            android:textStyle="bold"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextInvite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPool" />
+
+        <TextView
+            android:id="@+id/textViewOr"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="@font/ericssoncapital"
+            android:gravity="center"
+            android:text="\nOR\nHost a Game"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/editTextInvite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonJoin" />
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="70dp"
+            android:fontFamily="@font/ericssoncapital"
+            android:gravity="center"
+            android:text="Username"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/buttonJoin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewPool"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <TextView
+            android:id="@+id/textViewInstruction"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/ericssoncapital"
+            android:gravity="center"
+            android:text="Go to a Pool Table in Ericsson\nthen"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/buttonJoin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewPool" />
+
+        <Button
+            android:id="@+id/buttonHome"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="60dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="180dp"
-            android:text="Join"
+            android:text="Home"
             app:cornerRadius="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextInvite"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/textViewPool"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toBottomOf="@+id/textViewPool"
+            app:layout_constraintEnd_toStartOf="@+id/textViewPool"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/toolbar" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

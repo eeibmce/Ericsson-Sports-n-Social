@@ -26,7 +26,7 @@ public class HomePage extends AppCompatActivity {
         calender = findViewById(R.id.calender);
         raffle = findViewById(R.id.raffle);
         profile = findViewById(R.id.Profile);
-        pool = findViewById(R.id.Tournament);
+        pool = findViewById(R.id.buttonPool);
         buttonContact = findViewById(R.id.buttonContact);
         foot = findViewById(R.id.imageButtonFootball);
         gaa = findViewById(R.id.imageButtongaa);
