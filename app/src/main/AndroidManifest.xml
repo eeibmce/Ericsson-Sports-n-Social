@@ -16,6 +16,9 @@
         android:theme="@style/Theme.SportsNSocialAPP"
         tools:targetApi="31">
         <activity
+            android:name=".MyClubs"
+            android:exported="false" />
+        <activity
             android:name=".VisitorActivity"
             android:exported="false" />
         <activity

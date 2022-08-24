@@ -1,5 +1,6 @@
 package com.example.sportsnspocialapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -15,13 +16,19 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.SetOptions;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class GolfActivity extends AppCompatActivity {
     Button back;
@@ -66,15 +73,63 @@ public class GolfActivity extends AppCompatActivity {
             }
         });
 
+
         golfJoin = (Button) findViewById(R.id.checkBox);
         fStore = FirebaseFirestore.getInstance();
         fAuth = FirebaseAuth.getInstance();
         golfJoinClub = "Golf Club";
+        String UserEmail2 = fAuth.getCurrentUser().getEmail();
+        fStore.collection("users")
+                .whereEqualTo("email", UserEmail2)
+                .get()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        for (QueryDocumentSnapshot document : task.getResult()) {
+
+                            fStore.collection("users").document(document.getId())
+                                    .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                            if (task.isSuccessful()) {
+                                                DocumentSnapshot document = task.getResult();
+                                                if (document.exists()) {
+                                                    String verifyGolfMember = document.getString("Golf Club");
+
+                                                    if (Objects.equals(verifyGolfMember, "Member")) {
+                                                        myGolfClubStatus = true;
+                                                        golfJoin.setText("Leave");
+                                                        golfJoin.setBackgroundColor(0xFFFF0000);
+                                                    } else {
+                                                        myGolfClubStatus = false;
+                                                        golfJoin.setText("Join");
+                                                        golfJoin.setBackgroundColor(Color.parseColor("#249C4F"));
+                                                    }
+
+
+
+                                                    Log.d("[lolz]", "DocumentSnapshot data: " + document.getData());
+                                                } else {
+                                                    Log.d("[]", "No such document");
+                                                }
+                                            } else {
+                                                Log.d("[]", "get failed with ", task.getException());
+                                            }
+                                        }
+                                    });
+
+
+                        }
+
+                    } else {
+                        Log.d("[]", "Error getting documents: ", task.getException());
+                    }
+                });
+
 
 //
         golfJoin.setOnClickListener(view -> {
-            if (myGolfClubStatus == true) {
-                myGolfClubStatus = false;
+            if (myGolfClubStatus == false) {
+                myGolfClubStatus = true;
                 golfJoin.setText("Leave");
                 golfJoin.setBackgroundColor(0xFFFF0000);
                 Toast.makeText(GolfActivity.this, "You have joined this club!", Toast.LENGTH_LONG).show();
@@ -97,7 +152,7 @@ public class GolfActivity extends AppCompatActivity {
                         });
             }
             else {
-                myGolfClubStatus = true;
+                myGolfClubStatus = false;
                 golfJoin.setText("Join");
                 golfJoin.setBackgroundColor(Color.parseColor("#249C4F"));
                 Toast.makeText(GolfActivity.this, "You have left this club!", Toast.LENGTH_LONG).show();
