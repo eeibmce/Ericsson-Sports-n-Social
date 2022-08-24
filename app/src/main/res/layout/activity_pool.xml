@@ -38,7 +38,7 @@
             android:layout_marginEnd="150dp"
             android:layout_marginBottom="75dp"
             android:fontFamily="@font/ericssoncapital"
-            android:text="Play"
+            android:text="Host"
             android:textStyle="bold"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toTopOf="@+id/imageViewLogo"
@@ -112,24 +112,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/buttonID"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="120dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="@font/ericssoncapital"
-            android:text="Show ID"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            app:cornerRadius="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/editTextInvite"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewPool" />
-
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
@@ -140,21 +122,18 @@
             tools:layout_editor_absoluteY="-14dp" />
 
         <Button
-            android:id="@+id/buttonShare"
+            android:id="@+id/buttonJoinHost"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="60dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="180dp"
-            android:fontFamily="@font/ericssoncapital"
-            android:text="Share ID"
-            android:textSize="12sp"
-            android:textStyle="bold"
+            android:text="Join"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toTopOf="@+id/editTextInvite"
-            app:layout_constraintEnd_toStartOf="@+id/textViewPool"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textViewPool"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

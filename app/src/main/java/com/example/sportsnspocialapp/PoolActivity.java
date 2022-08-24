@@ -15,20 +15,24 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.example.sportsnspocialapp.UserVariables;
 import java.util.Map;
+import java.util.Objects;
 
 public class PoolActivity extends AppCompatActivity {
     boolean myIDDisplayed = false;
+    FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,48 +45,11 @@ public class PoolActivity extends AppCompatActivity {
         String myID = currentFirebaseUser.getUid();
 
 
-        EditText editTextCode = (EditText) findViewById(R.id.editTextInvite);
 
-        Button btnAddInvite = (Button) findViewById(R.id.buttonShare);
-
-        btnAddInvite.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-
-                openInviteActivity();
-            }
-        });
-
-        Button btnID = (Button) findViewById(R.id.buttonID);
-
-        btnID.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
+        Button btnAddHost = (Button) findViewById(R.id.buttonPlay);
 
 
-
-                btnID.setText("Show ID");
-
-                if (myIDDisplayed == true) {
-                    myIDDisplayed = false;
-                    btnID.setText("Show ID");
-                } else {
-                    myIDDisplayed = true;
-                    FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-                    String myID = currentFirebaseUser.getUid();
-                    btnID.setText(myID);
-                }
-
-
-            }
-        });
-
-        Button btnAddPlay = (Button) findViewById(R.id.buttonPlay);
-
-
-        btnAddPlay.setOnClickListener(new View.OnClickListener() {
+        btnAddHost.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
@@ -91,6 +58,31 @@ public class PoolActivity extends AppCompatActivity {
                 UserVariables userV = new UserVariables();
 
                 openSearchActivity();
+            }
+        });
+
+
+        //JoinGame Button
+        Button btnAddJoinHost = (Button) findViewById(R.id.buttonJoinHost);
+
+
+        btnAddJoinHost.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+                String myID = currentFirebaseUser.getUid();
+                DocumentReference user = db.collection("users").document(myID);
+                user.update("In Game", "true").addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        System.out.println("Updated");
+                        Intent visitor = new Intent(PoolActivity.this, VisitorActivity.class);
+                        startActivity(visitor);
+                        //Skill Rating Text
+                    }
+                });
+
             }
         });
 
@@ -131,6 +123,14 @@ public class PoolActivity extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
+
+                        String inGame = document.getString("In Game");
+
+                        System.out.println(inGame);
+
+                        if(Objects.equals(inGame, "true")){
+
+
                         UserVariables userV = new UserVariables();
     //                        inputCode = editTextCode.getText().toString();
                         System.out.println("******** 4 " + inputCode);
@@ -140,6 +140,8 @@ public class PoolActivity extends AppCompatActivity {
 
                         //Reading field in database
                         String opponentName = document.getString("fName");
+
+
 
                         //Sending to another class
 
@@ -151,7 +153,11 @@ public class PoolActivity extends AppCompatActivity {
                         result.putExtra("OpponentName", opponentName);
                         result.putExtra("inputID", inputCode);
                         startActivity(result);
+                        }
 
+                        else {
+                            editTextCode.setError("Tell Other User to Click Join Button");
+                        }
 
                     }
                     else {
