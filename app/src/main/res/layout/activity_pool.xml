@@ -117,9 +117,10 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:popupTheme="@style/Theme.SportsNSpocialAPP.PopupOverlay"
-            tools:layout_editor_absoluteX="97dp"
-            tools:layout_editor_absoluteY="-14dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/Theme.SportsNSpocialAPP.PopupOverlay" />
 
         <Button
             android:id="@+id/buttonJoinHost"
