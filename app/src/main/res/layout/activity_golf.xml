@@ -4,34 +4,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundeoin"
+    android:background="#A6A6A6"
     tools:context=".GolfActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="917dp">
+        android:layout_height="917dp"
+        android:background="@drawable/backgroundeoinold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="429dp"
             android:layout_height="39dp"
             android:layout_marginTop="16dp"
-            android:background="#283593"
-            android:fontFamily="sans-serif-smallcaps"
+            android:fontFamily="@font/ericssoncapital"
             android:text="Ericsson Golf Society"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="34sp"
+            android:textColor="#FCFDFD"
+            android:textSize="28sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.121" />
+            app:layout_constraintVertical_bias="0.124" />
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="55dp"
-            android:layout_height="50dp"
+            android:layout_width="36dp"
+            android:layout_height="30dp"
             android:background="#00283593"
             android:contentDescription="TODO"
             android:scaleType="centerCrop"
@@ -47,19 +51,18 @@
 
         <ImageButton
             android:id="@+id/imageButton3"
-            android:layout_width="100dp"
-            android:layout_height="70dp"
+            android:layout_width="70dp"
+            android:layout_height="52dp"
             android:background="#00FFFFFF"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.732"
+            app:layout_constraintHorizontal_bias="0.824"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.039"
+            app:layout_constraintVertical_bias="0.04"
             app:srcCompat="@drawable/timetable2"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
 
         <Button
             android:id="@+id/checkBox"
@@ -72,10 +75,10 @@
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.895" />
 
         <TextView
             android:id="@+id/textView2"
@@ -84,14 +87,15 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="24dp"
+            android:fontFamily="sans-serif-medium"
             android:onClick="browser"
             android:text="Click here to view the website"
             android:textAlignment="center"
-            android:textColor="#37474F"
+            android:textColor="#3ADD3D"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.557"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.837"
@@ -115,10 +119,13 @@
             android:layout_width="267dp"
             android:layout_height="207dp"
             android:ems="10"
+            android:fontFamily="sans-serif-medium"
             android:gravity="start|top"
             android:inputType="textMultiLine"
             android:scrollbars="vertical"
             android:text=" Welcome to the EGS Athlone webpage   With close to fifty members, we are one of the biggest societies in Ericsson Athlone.  We have an excellent fixture list and a great history over the last 30+ years.  Please use the navigation menu to browse the site.   If you have any suggestions or improvements for the site please let a committee member know.  New female or male members of any golfing level are most welcome! If you would like to join please contact a committee member listed on the 'Join' page"
+            android:textColor="#F1F2F4"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -128,26 +135,26 @@
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="91dp"
-            android:layout_height="77dp"
+            android:layout_width="96dp"
+            android:layout_height="89dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.984"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.99"
+            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/essalogo" />
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="96dp"
-            android:layout_height="78dp"
+            android:layout_width="83dp"
+            android:layout_height="75dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintHorizontal_bias="0.009"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.033"
+            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/ericssonlogo" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
