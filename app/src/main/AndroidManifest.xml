@@ -40,7 +40,7 @@
             android:name=".ContactActivity"
             android:exported="false" />
         <activity
-            android:name=".BasketballActivity"
+            android:name=".Raffle"
             android:exported="false" />
         <activity
             android:name=".GolfActivity"
@@ -61,7 +61,7 @@
             android:name=".Calendar"
             android:exported="false" />
         <activity
-            android:name=".Chat_page"
+            android:name=".ChatPage"
             android:exported="false" />
         <activity
             android:name=".Login"
