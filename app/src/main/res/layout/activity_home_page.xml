@@ -14,16 +14,19 @@
         android:background="@drawable/background"
         tools:context=".HomePage">
 
+
         <TextView
             android:id="@+id/textView_one"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
             android:fontFamily="sans-serif-black"
             android:text="@string/title"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="#FFFFFF"
-            android:textSize="40sp" />
+            android:textSize="40sp"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -173,12 +176,12 @@
             android:layout_width="0dp"
             android:layout_height="70dp"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="150dp"
             android:layout_marginEnd="70dp"
             android:layout_marginBottom="495dp"
             android:onClick="browser"
             android:text="Contact Us"
-            app:cornerRadius="20dp"
+            app:cornerRadius="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -256,17 +259,7 @@
             app:layout_constraintStart_toEndOf="@+id/imageButtonFootball"
             app:layout_constraintTop_toTopOf="@+id/imageButtonGolf" />
 
-        <ImageView
-            android:id="@+id/menu"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.456"
-            app:layout_constraintStart_toEndOf="@+id/buttonContact"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.113"
-            app:srcCompat="@drawable/ooo"/>
+
 
         <TextView
             android:id="@+id/calender"
@@ -361,19 +354,37 @@
             app:layout_constraintStart_toStartOf="@+id/imageButtontag"
             app:layout_constraintTop_toTopOf="@+id/imageButtontag" />
 
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@id/imageButtonGolf"
+            android:layout_marginTop="55dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.456"
+            app:layout_constraintStart_toEndOf="@+id/buttonContact"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.113"
+            app:srcCompat="@drawable/ooo" />
+
         <Button
             android:id="@+id/buttonPool"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="19dp"
             android:layout_marginEnd="25dp"
+            android:fontFamily="sans-serif"
             android:text="Ranked Pool"
-            app:cornerRadius="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/imageButtonFootball"
+            android:textStyle="bold"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonContact"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.529"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonContact" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_one"
+            app:layout_constraintVertical_bias="0.333" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
