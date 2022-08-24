@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 public class HomePage extends AppCompatActivity {
     ImageView menu;
-    TextView calender, raffle, profile, tour;
+    TextView calender, raffle, profile, pool;
     Button buttonContact;
     ImageButton foot, gaa, bad, golf, tag, squash, tabletennis;
 
@@ -26,7 +26,7 @@ public class HomePage extends AppCompatActivity {
         calender = findViewById(R.id.calender);
         raffle = findViewById(R.id.raffle);
         profile = findViewById(R.id.Profile);
-        tour = findViewById(R.id.Tournament);
+        pool = findViewById(R.id.Tournament);
         buttonContact = findViewById(R.id.buttonContact);
         foot = findViewById(R.id.imageButtonFootball);
         gaa = findViewById(R.id.imageButtongaa);
@@ -44,12 +44,12 @@ public class HomePage extends AppCompatActivity {
                     calender.setVisibility(View.VISIBLE);
                     raffle.setVisibility(View.VISIBLE);
                     profile.setVisibility(View.VISIBLE);
-                    tour.setVisibility(View.VISIBLE);
+                    pool.setVisibility(View.VISIBLE);
                 } else {
                     calender.setVisibility(View.GONE);
                     raffle.setVisibility(View.GONE);
                     profile.setVisibility(View.GONE);
-                    tour.setVisibility(View.GONE);
+                    pool.setVisibility(View.GONE);
                 }
 
             }
@@ -111,10 +111,12 @@ public class HomePage extends AppCompatActivity {
         });
 // end part 2
 //  start part 3
-        tour.setOnClickListener(new View.OnClickListener() {
+        pool.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), PoolActivity.class));
+                Intent pool = new Intent(getApplicationContext(), PoolActivity.class);
+//                pool.putExtra()
+                startActivity(pool);
 
             }
         });

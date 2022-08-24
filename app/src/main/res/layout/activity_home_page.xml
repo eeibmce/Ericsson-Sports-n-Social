@@ -266,7 +266,7 @@
             app:layout_constraintStart_toEndOf="@+id/buttonContact"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.113"
-            app:srcCompat="@drawable/golf" />
+            app:srcCompat="@drawable/ooo"/>
 
         <TextView
             android:id="@+id/calender"

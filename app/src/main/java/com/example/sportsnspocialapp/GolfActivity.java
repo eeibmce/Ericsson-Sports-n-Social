@@ -3,6 +3,7 @@ package com.example.sportsnspocialapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -30,7 +31,7 @@ public class GolfActivity extends AppCompatActivity {
     Button golfJoin;
     FirebaseFirestore fStore;
     FirebaseAuth fAuth;
-    boolean myGolfClubStatus = true;
+    boolean myGolfClubStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +99,8 @@ public class GolfActivity extends AppCompatActivity {
             else {
                 myGolfClubStatus = true;
                 golfJoin.setText("Join");
-                Toast.makeText(GolfActivity.this, "You have joined this club!", Toast.LENGTH_LONG).show();
+                golfJoin.setBackgroundColor(Color.parseColor("#249C4F"));
+                Toast.makeText(GolfActivity.this, "You have left this club!", Toast.LENGTH_LONG).show();
                 String UserEmail = fAuth.getCurrentUser().getEmail();
                 fStore.collection("users")
                         .whereEqualTo("email", UserEmail)
