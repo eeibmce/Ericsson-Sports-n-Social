@@ -18,9 +18,7 @@
         <activity
             android:name=".BadmintonActivity"
             android:exported="false" />
-        <activity
-            android:name=".CricketActivity"
-            android:exported="false" />
+
         <activity
             android:name=".TagRugbyActivity"
             android:exported="false" />
@@ -44,7 +42,8 @@
             android:exported="false" />
         <activity
             android:name=".GaaActivity"
-            android:exported="false" />
+            android:exported="false"
+            tools:ignore="DuplicateActivity" />
         <activity
             android:name=".SplashActivity"
             android:exported="false" />

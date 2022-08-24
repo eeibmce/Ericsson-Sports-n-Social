@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -25,7 +26,7 @@ import java.util.Map;
 
 public class GolfActivity extends AppCompatActivity {
     String golfJoinClub;
-    CheckBox golfJoin;
+    Button golfJoin;
     FirebaseFirestore fStore;
     FirebaseAuth fAuth;
     private ImageButton button;
@@ -49,7 +50,7 @@ public class GolfActivity extends AppCompatActivity {
         button2 = (ImageButton) findViewById(R.id.imageButton3);
         button2.setOnClickListener(view -> openCalendar());
 
-        golfJoin = (CheckBox) findViewById(R.id.checkBox);
+        golfJoin = (Button) findViewById(R.id.checkBox);
         fStore = FirebaseFirestore.getInstance();
         fAuth = FirebaseAuth.getInstance();
         golfJoinClub = "Golf Club";
@@ -112,9 +113,8 @@ public class GolfActivity extends AppCompatActivity {
     }
 
     public void openChatPage() {
-        Intent intent = new Intent(this, ChatPage.class);
-        startActivity(intent);
-        setContentView(R.layout.activity_chat_page);
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/login/"));
+        startActivity(browserIntent);
     }
 
     public void openCalendar() {
