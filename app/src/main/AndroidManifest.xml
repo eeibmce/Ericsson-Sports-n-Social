@@ -16,18 +16,20 @@
         android:theme="@style/Theme.SportsNSocialAPP"
         tools:targetApi="31">
         <activity
-            android:name=".BadmintonActivity"
-            android:exported="false" />
-
-        <activity
-            android:name=".TagRugbyActivity"
+            android:name=".VisitorActivity"
             android:exported="false" />
         <activity
-            android:name=".SquashActivity"
+            android:name=".LoseActivity"
             android:exported="false" />
         <activity
-            android:name=".GaaActivity"
+            android:name=".WinnerActivity"
             android:exported="false" />
+        <activity
+            android:name=".ResultActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GameActivity"
+            android:exported="true" />
         <activity
             android:name=".HomePage"
             android:exported="false" />
@@ -41,18 +43,23 @@
             android:name=".ContactActivity"
             android:exported="false" />
         <activity
-            android:name=".GaaActivity"
-            android:exported="false"
-            tools:ignore="DuplicateActivity" />
+            android:name=".Raffle"
+            android:exported="false" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".GolfActivity"
             android:exported="false" />
         <activity
             android:name=".FootballActivity"
             android:exported="false" />
         <activity
             android:name=".PoolActivity"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Calendar"
             android:exported="false" />
@@ -63,19 +70,34 @@
             android:name=".Login"
             android:exported="false" />
         <activity
-            android:name=".GolfActivity"
+            android:name=".SplashActivity"
             android:exported="true">
-            android:theme = "@style/Theme.SportsNSocialAPP1>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="https" />
+                <data android:scheme="https" />
+                <data android:host="www.example.com" />
+                <data android:host="mobile.example.com" />
+            </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
             <!-- <intent-filter> -->
             <!-- <action android:name="android.intent.action.MAIN" /> -->
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

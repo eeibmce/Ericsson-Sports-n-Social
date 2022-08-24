@@ -43,9 +43,7 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         mFullName = findViewById(R.id.FullName);
-        String sFullName = mFullName.getText().toString();
         mEmail = findViewById(R.id.Email);
-        String sEmail = mEmail.getText().toString();
         mPassword = findViewById(R.id.Password);
         mRegister = findViewById(R.id.Register);
         mLOG = findViewById(R.id.goLog);
@@ -66,6 +64,7 @@ public class Register extends AppCompatActivity {
             public void onClick(View view) {
                 String email = mEmail.getText().toString().trim();
                 String password = mPassword.getText().toString().trim();
+                String fullName = mFullName.getText().toString();
 
                 if (TextUtils.isEmpty(email)) {
                     mEmail.setError("Email is required.");
@@ -104,37 +103,41 @@ public class Register extends AppCompatActivity {
                                 }
                             });
 
-//
-                            Map<String, Object> user = new HashMap<>();
-                            user.put("Full Name", sFullName);
-                            user.put("email", "awesome3");
+
+
 
                             Toast.makeText(Register.this, "User Created.", Toast.LENGTH_SHORT).show();
                             userID = fAuth.getCurrentUser().getUid();
-                            fStore.collection("users").document(userID)
-                                    .set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
-                                        @Override
-                                        public void onSuccess(Void aVoid) {
-                                            Log.d(TAG, "DocumentSnapshot successfully written!");
-                                        }
-                                    })
-                                    .addOnFailureListener(new OnFailureListener() {
-                                        @Override
-                                        public void onFailure(@NonNull Exception e) {
-                                            Log.w(TAG, "Error writing document", e);
-                                        }
-                                    });
+                            DocumentReference documentReference = fStore.collection("users").document(userID);
+                            Map<String,Object> user = new HashMap<>();
+
+
+                            user.put("fName", fullName);
+                            user.put("email", email);
+                            user.put("Skill Rating", 1000);
+                            user.put("In Game", false);
+
+                            documentReference.set(user).addOnSuccessListener((OnSuccessListener) (aVoid) -> {
+                                    Log.d(TAG, "onSuccess: user Profile is created for " + userID);
+                                Intent intent = new Intent(Register.this, HomeFragment.class);
+
+                                startActivity(intent);
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Log.d(TAG, "onFailure: " + e);
+                                }
+                            });
 
 
                         } else {
                             Toast.makeText(Register.this, "Error!" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
-                    });
-                }
+                });
 
 
-            });
-
+            }
+        });
     }
 }
