@@ -5,17 +5,24 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 public class Profile extends AppCompatActivity {
 
@@ -52,6 +59,30 @@ public class Profile extends AppCompatActivity {
 
         userId = fAuth.getCurrentUser().getUid();
         FirebaseUser user = fAuth.getCurrentUser();
+
+        String UserEmail = fAuth.getCurrentUser().getEmail();
+        fStore.collection("users")
+                .whereEqualTo("email", UserEmail)
+                .get()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        for (QueryDocumentSnapshot document : task.getResult()) {
+                            fStore.collection("users").document(document.getId())
+                            .addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
+                                @Override
+                                public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                                    fullName.setText(value.getString("fName"));
+                                }
+                            });
+
+                        }
+                    } else {
+                        Log.d("[]", "Error getting documents: ", task.getException());
+                    }
+                });
+
+
+
 
         if (!user.isEmailVerified()) {
             verifymsg.setVisibility(View.VISIBLE);
