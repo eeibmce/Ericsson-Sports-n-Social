@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -90,12 +91,12 @@ public class LoseActivity extends AppCompatActivity {
 
 
                     //Reading opponent Skill Rating in database
-                    int skillRatingOpponent = document.getLong("Skill Rating").intValue();
-                    int skillRatingNewOpp = skillRatingOpponent - 30;
+                    int skillRatingUser = document.getLong("Skill Rating").intValue();
+                    int skillRatingNewUser = skillRatingUser - 30;
 
                     //Updating Firestore
                     DocumentReference user = db.collection("users").document(userID);
-                    user.update("Skill Rating", skillRatingNewOpp).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    user.update("Skill Rating", skillRatingNewUser).addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
                             System.out.println("Updated");
@@ -105,8 +106,39 @@ public class LoseActivity extends AppCompatActivity {
 
                     //Setting skill rating textview
                     TextView textSkill = findViewById(R.id.textViewSkillUser);
-                    textSkill.setText(String.valueOf(skillRatingNewOpp));
+                    textSkill.setText(String.valueOf(skillRatingNewUser));
 
+
+                    //Change Rank Image and Text
+                    ImageView imgRank = findViewById(R.id.imageViewRank);
+
+                    TextView txtRank = findViewById(R.id.textViewRank);
+
+                    if (skillRatingNewUser > 2400){
+                        System.out.println("Master");
+                        imgRank.setBackgroundResource(R.drawable.rankmaster);
+                        txtRank.setText("Master");
+                    }
+                    else if (skillRatingNewUser > 2000){
+                        System.out.println("Veteran");
+                        imgRank.setBackgroundResource(R.drawable.rankvet);
+                        txtRank.setText("Veteran");
+                    }
+                    else if (skillRatingNewUser > 1600){
+                        System.out.println("Pro");
+                        imgRank.setBackgroundResource(R.drawable.rankpro);
+                        txtRank.setText("Pro");
+                    }
+                    else if (skillRatingNewUser > 1200){
+                        System.out.println("Amateur");
+                        imgRank.setBackgroundResource(R.drawable.rankamateur);
+                        txtRank.setText("Amateur");
+                    }
+                    else {
+                        System.out.println("Rookie");
+                        imgRank.setBackgroundResource(R.drawable.rankrookie);
+                        txtRank.setText("Rookie");
+                    }
 
                     //Button to Finish
                     Button buttonFinish = findViewById(R.id.buttonFinish);

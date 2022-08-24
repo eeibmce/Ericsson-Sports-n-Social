@@ -13,6 +13,7 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -114,14 +115,46 @@ public class WinnerActivity extends AppCompatActivity {
 
 
                     //Fade Animation
-                    TextView textView30 = findViewById(R.id.textView30);
+//                    TextView textView30 = findViewById(R.id.textView30);
+//
+//                    Animation fadeOut = new AlphaAnimation(1, 0);
+//                    fadeOut.setInterpolator(new AccelerateInterpolator());
+//                    fadeOut.setStartOffset(500);
+//                    fadeOut.setDuration(1800);
+//
+//                    textView30.setAnimation(fadeOut);
 
-                    Animation fadeOut = new AlphaAnimation(1, 0);
-                    fadeOut.setInterpolator(new AccelerateInterpolator());
-                    fadeOut.setStartOffset(500);
-                    fadeOut.setDuration(1800);
 
-                    textView30.setAnimation(fadeOut);
+                    //Change Rank Image and Text
+                    ImageView imgRank = findViewById(R.id.imageViewRank);
+
+                    TextView txtRank = findViewById(R.id.textViewRank);
+
+                    if (skillRatingNewUser > 2400){
+                        System.out.println("Master");
+                        imgRank.setBackgroundResource(R.drawable.rankmaster);
+                        txtRank.setText("Master");
+                    }
+                    else if (skillRatingNewUser > 2000){
+                        System.out.println("Veteran");
+                        imgRank.setBackgroundResource(R.drawable.rankvet);
+                        txtRank.setText("Veteran");
+                    }
+                    else if (skillRatingNewUser > 1600){
+                        System.out.println("Pro");
+                        imgRank.setBackgroundResource(R.drawable.rankpro);
+                        txtRank.setText("Pro");
+                    }
+                    else if (skillRatingNewUser > 1200){
+                        System.out.println("Amateur");
+                        imgRank.setBackgroundResource(R.drawable.rankamateur);
+                        txtRank.setText("Amateur");
+                    }
+                    else {
+                        System.out.println("Rookie");
+                        imgRank.setBackgroundResource(R.drawable.rankrookie);
+                        txtRank.setText("Rookie");
+                    }
 
 
                     //Button to Finish
