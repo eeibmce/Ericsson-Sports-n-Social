@@ -1,33 +1,21 @@
 package com.example.sportsnspocialapp;
 
-import static android.content.ContentValues.TAG;
-
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
-import android.widget.Toast;
+import android.widget.TextView;
 
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
-import com.example.sportsnspocialapp.UserVariables;
-import java.util.Map;
+
 import java.util.Objects;
 
 public class PoolActivity extends AppCompatActivity {
@@ -41,32 +29,57 @@ public class PoolActivity extends AppCompatActivity {
 
 
 
-        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-        String myID = currentFirebaseUser.getUid();
+
+        //Home Button
+        Button btnHome = findViewById(R.id.buttonHome);
+
+        btnHome.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                Intent visitor = new Intent(PoolActivity.this, HomePage.class);
+                startActivity(visitor);
+            }
+        });
 
 
-
-        Button btnAddHost = (Button) findViewById(R.id.buttonPlay);
+//Host Button
+        Button btnAddHost = (Button) findViewById(R.id.buttonHost);
 
 
         btnAddHost.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
-//                String code = editTextCode.getText().toString();
-//                System.out.println(code);
-                UserVariables userV = new UserVariables();
-
                 openSearchActivity();
             }
         });
 
 
+        //Putting Username on Screen
+        TextView txtName = findViewById(R.id.textViewName);
+
+        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        String myID = currentFirebaseUser.getUid();
+
+        db.collection("users").document(myID).get().addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        DocumentSnapshot document = task.getResult();
+                        if (document.exists()) {
+                            String myName = document.getString("fName");
+                            System.out.println(myName);
+                            txtName.setText(myName);
+                        }
+                    }
+                        });
+
+
+
         //JoinGame Button
-        Button btnAddJoinHost = (Button) findViewById(R.id.buttonJoinHost);
+        Button btnAddJoin = (Button) findViewById(R.id.buttonJoin);
 
 
-        btnAddJoinHost.setOnClickListener(new View.OnClickListener() {
+        btnAddJoin.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {

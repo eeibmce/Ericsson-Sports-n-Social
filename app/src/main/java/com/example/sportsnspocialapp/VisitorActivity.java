@@ -110,5 +110,24 @@ public class VisitorActivity extends AppCompatActivity {
 
 
 
+    @Override
+    public void onBackPressed() {
 
+        FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+        String myID = currentFirebaseUser.getUid();
+        DocumentReference user = db.collection("users").document(myID);
+        user.update("In Game", "false").addOnSuccessListener(new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+                System.out.println("Updated");
+
+                Intent leave = new Intent(VisitorActivity.this, PoolActivity.class);
+                startActivity(leave);
+                //Skill Rating Text
+            }
+        });
+
+        Intent leave = new Intent(VisitorActivity.this, PoolActivity.class);
+        // Do Here what ever you want do on back press;
+    }
 }
