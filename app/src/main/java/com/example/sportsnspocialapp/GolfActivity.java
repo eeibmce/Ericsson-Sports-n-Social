@@ -69,11 +69,13 @@ public class GolfActivity extends AppCompatActivity {
         fStore = FirebaseFirestore.getInstance();
         fAuth = FirebaseAuth.getInstance();
         golfJoinClub = "Golf Club";
+
 //
         golfJoin.setOnClickListener(view -> {
             if (myGolfClubStatus == true) {
                 myGolfClubStatus = false;
                 golfJoin.setText("Leave");
+                golfJoin.setBackgroundColor(0xFFFF0000);
                 Toast.makeText(GolfActivity.this, "You have joined this club!", Toast.LENGTH_LONG).show();
                 String UserEmail = fAuth.getCurrentUser().getEmail();
                 fStore.collection("users")
