@@ -92,7 +92,7 @@
             android:layout_marginBottom="8dp"
             android:backgroundTint="#249C4F"
             android:text="Join"
-            android:textSize="18sp"
+            android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.487"

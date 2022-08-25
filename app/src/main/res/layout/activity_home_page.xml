@@ -11,7 +11,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/backgroundeoinold"
+        android:background="@drawable/backgroundeoin"
         tools:context=".HomePage">
 
         <TextView
@@ -51,14 +51,14 @@
 
         <ImageButton
             android:id="@+id/imageButtongaa"
-            android:layout_width="181dp"
+            android:layout_width="170dp"
             android:layout_height="156dp"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="544dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="552dp"
             android:layout_marginEnd="205dp"
             android:background="#191F4D"
             android:padding="4dp"
-            android:scaleType="centerInside"
+            android:scaleType="centerCrop"
             android:src="@drawable/ericssongaa"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -70,7 +70,7 @@
             android:layout_width="0dp"
             android:layout_height="148dp"
             android:layout_marginStart="120dp"
-            android:layout_marginTop="688dp"
+            android:layout_marginTop="708dp"
             android:layout_marginEnd="120dp"
             android:background="#191F4D"
             android:cropToPadding="false"
@@ -78,7 +78,7 @@
             android:scaleType="centerCrop"
             android:src="@drawable/badminton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -87,7 +87,7 @@
             android:layout_width="161dp"
             android:layout_height="144dp"
             android:layout_marginStart="35dp"
-            android:layout_marginTop="396dp"
+            android:layout_marginTop="400dp"
             android:layout_marginEnd="205dp"
             android:background="#191F4D"
             android:cropToPadding="false"
@@ -101,11 +101,11 @@
 
         <ImageButton
             android:id="@+id/imageButtonFootball"
-            android:layout_width="161dp"
+            android:layout_width="0dp"
             android:layout_height="144dp"
             android:layout_marginStart="35dp"
             android:layout_marginTop="240dp"
-            android:layout_marginEnd="205dp"
+            android:layout_marginEnd="198dp"
             android:layout_marginBottom="370dp"
             android:background="#191F4D"
             android:scaleType="centerCrop"
@@ -119,7 +119,7 @@
 
         <ImageButton
             android:id="@+id/imageButtonGolf"
-            android:layout_width="172dp"
+            android:layout_width="0dp"
             android:layout_height="143dp"
             android:layout_marginStart="205dp"
             android:layout_marginTop="240dp"
@@ -131,7 +131,6 @@
             android:src="@drawable/ericssongolf1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
@@ -139,7 +138,7 @@
         <ImageButton
             android:id="@+id/imageButtontag"
             android:layout_width="0dp"
-            android:layout_height="148dp"
+            android:layout_height="158dp"
             android:layout_marginStart="205dp"
             android:layout_marginTop="551dp"
             android:layout_marginEnd="35dp"
@@ -149,7 +148,7 @@
             android:src="@drawable/tagrugby_image"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />
@@ -157,11 +156,11 @@
         <ImageButton
             android:id="@+id/imageButtontennis"
             android:layout_width="0dp"
-            android:layout_height="148dp"
+            android:layout_height="0dp"
             android:layout_marginStart="205dp"
-            android:layout_marginTop="396dp"
+            android:layout_marginTop="405dp"
             android:layout_marginEnd="35dp"
-            android:layout_marginBottom="370dp"
+            android:layout_marginBottom="540dp"
             android:background="#191F4D"
             android:scaleType="centerCrop"
             android:src="@drawable/tabletennis"
@@ -277,7 +276,7 @@
             app:layout_constraintStart_toEndOf="@+id/buttonContact"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.159"
-            app:srcCompat="@drawable/arachblue_removebg_preview" />
+            app:srcCompat="@drawable/arachblue_alfie" />
 
         <TextView
             android:id="@+id/calender"
