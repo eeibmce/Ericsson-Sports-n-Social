@@ -67,8 +67,8 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), WorkingTableTennis.class));
-    }
-});
+            }
+        });
 
         squash.setOnClickListener(new View.OnClickListener() {
             @Override

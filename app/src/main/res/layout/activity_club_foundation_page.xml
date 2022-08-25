@@ -134,7 +134,7 @@
             app:layout_constraintVertical_bias="0.811" />
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/checkBoxTagRugby"
             android:layout_width="94dp"
             android:layout_height="52dp"
             android:layout_marginStart="8dp"

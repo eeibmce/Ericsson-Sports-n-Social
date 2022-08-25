@@ -76,7 +76,7 @@
             app:srcCompat="@drawable/essalogo" />
 
         <Button
-            android:id="@+id/checkBox"
+            android:id="@+id/checkBoxGolf"
             android:layout_width="98dp"
             android:layout_height="62dp"
             android:backgroundTint="#249C4F"
