@@ -1,5 +1,6 @@
 package com.example.sportsnspocialapp;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
@@ -31,7 +32,7 @@ public class Raffle extends AppCompatActivity {
     List raffleNames = new ArrayList();
 
 
-    Button enterRaffle;
+    Button enterRaffle, raffleBack;
     TextView tv;
     Button reset;
     Button run;
@@ -44,6 +45,7 @@ public class Raffle extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_raffle);
+        raffleBack = findViewById(R.id.back);
         enterRaffle = findViewById(R.id.enterButton);
         tv = findViewById(R.id.textView7);
         reset = findViewById(R.id.resetButton);
@@ -51,6 +53,13 @@ public class Raffle extends AppCompatActivity {
         message = findViewById(R.id.textView8);
         celebrationView = findViewById(R.id.celebrationView);
         final Shape.DrawableShape[] drawableShape = {null};
+
+        raffleBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), HomePage.class));
+            }
+        });
 
         enterRaffle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,7 +96,7 @@ public class Raffle extends AppCompatActivity {
                 System.out.println(raffleNames.get(index));
                 TextView message = Raffle.this.findViewById(R.id.textView8);
                 message.setVisibility(View.VISIBLE);
-                message.setText("CONGRATULATIONS " + raffleNames.get(index) + " ! ");
+                message.setText("CONGRATULATIONS " + raffleNames.get(index) + "! ");
 
 
                 EmitterConfig emitterConfig = new Emitter(5L, TimeUnit.SECONDS).perSecond(50);
@@ -114,4 +123,9 @@ public class Raffle extends AppCompatActivity {
         mediaPlayer.start();
 
     }
+
+
+
+
+
 }

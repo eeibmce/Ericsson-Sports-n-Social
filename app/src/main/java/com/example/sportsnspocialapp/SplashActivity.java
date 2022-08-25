@@ -8,6 +8,7 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -48,8 +49,9 @@ public class SplashActivity extends AppCompatActivity {
        fadeOut.setStartOffset(500);
        fadeOut.setDuration(1800);
        ImageView image = findViewById(R.id.imageView3);
-
-        image.setAnimation(fadeOut);
+//       TextView textView = findViewById(R.id.textView2);
+//       TextView textView1 = findViewById(R.id.textView);
+       image.setAnimation(fadeOut);
 
         new Handler().postDelayed(new Runnable() {
 
