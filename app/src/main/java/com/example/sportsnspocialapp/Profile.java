@@ -12,8 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -73,19 +75,27 @@ public class Profile extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         for (QueryDocumentSnapshot document : task.getResult()) {
                             fStore.collection("users").document(document.getId())
-                            .addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-                                @Override
-                                public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
-                                    fullName.setText(value.getString("fName"));
-                                    email.setText(value.getString("email"));
-                                }
-                            });
-
+                                    .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                            if (task.isSuccessful()) {
+                                                DocumentSnapshot value1 = task.getResult();
+                                                if (document.exists()) {
+                                                    Log.d("", "DocumentSnapshot data: " + document.getData());
+                                                    fullName.setText(value1.getString("fName"));
+                                                    email.setText(value1.getString("email"));
+                                                } else {
+                                                    Log.d("", "No such document");
+                                                }
+                                            } else {
+                                                Log.d("", "get failed with ", task.getException());
+                                            }
+                                        }
+                                    });
                         }
-                    } else {
-                        Log.d("[]", "Error getting documents: ", task.getException());
                     }
                 });
+
 
 
 

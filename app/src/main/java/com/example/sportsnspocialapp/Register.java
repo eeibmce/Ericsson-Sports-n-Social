@@ -115,7 +115,13 @@ public class Register extends AppCompatActivity {
                             user.put("fName", fullName);
                             user.put("email", email);
                             user.put("Skill Rating", 1000);
-                            user.put("In Game", false);
+                            user.put("Golf Club", "Not a Member");
+                            user.put("Badminton Club", "Not a Member");
+                            user.put("Squash Club", "Not a Member");
+                            user.put("Tabletennis Club", "Not a Member");
+                            user.put("Tag Rugby Club", "Not a Member");
+                            user.put("Soccer Club", "Not a Member");
+                            user.put("GAA Club", "Not a Member");
 
                             documentReference.set(user).addOnSuccessListener((OnSuccessListener) (aVoid) -> {
                                     Log.d(TAG, "onSuccess: user Profile is created for " + userID);
