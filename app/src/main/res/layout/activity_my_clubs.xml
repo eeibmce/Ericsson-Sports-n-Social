@@ -82,7 +82,7 @@
         app:layout_constraintVertical_bias="0.139" />
 
     <Button
-        android:id="@+id/myClubsButton"
+        android:id="@+id/backToIt"
         android:layout_width="80dp"
         android:layout_height="43dp"
         android:autoText="true"

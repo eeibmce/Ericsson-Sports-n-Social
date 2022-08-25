@@ -22,6 +22,7 @@ public class MyClubs extends AppCompatActivity {
     FirebaseFirestore fStore;
     FirebaseAuth fAuth;
     TextView mGolfMember, mBadmintonMember, mTagRugbyMember, mSoccerMember, mGAAMember, mSquashMember, mTableTennisMember;
+    Button backToIt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,14 @@ public class MyClubs extends AppCompatActivity {
         mSoccerMember = findViewById(R.id.SoccerMember);
         mSquashMember = findViewById(R.id.SquashMember);
         mTagRugbyMember = findViewById(R.id.TagRugbyMember);
+        backToIt = findViewById(R.id.backToIt);
+
+        backToIt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), Profile.class));
+            }
+        });
 
         fStore = FirebaseFirestore.getInstance();
         fAuth = FirebaseAuth.getInstance();
