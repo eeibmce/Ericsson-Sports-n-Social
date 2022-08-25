@@ -91,6 +91,7 @@ public class PoolActivity extends AppCompatActivity {
                     public void onSuccess(Void aVoid) {
                         System.out.println("Updated");
                         Intent visitor = new Intent(PoolActivity.this, VisitorActivity.class);
+                        visitor.putExtra("userName", myID);
                         startActivity(visitor);
                         //Skill Rating Text
                     }

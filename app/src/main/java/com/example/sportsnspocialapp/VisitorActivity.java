@@ -4,14 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.TextureView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class VisitorActivity extends AppCompatActivity {
@@ -90,6 +93,24 @@ public class VisitorActivity extends AppCompatActivity {
             }
 
     });
+
+
+        //Displaying Name on top of screen
+        TextView txtName = findViewById(R.id.textViewNameVisitor);
+        String userID = getIntent().getStringExtra("userName");
+
+
+        db.collection("users").document(myID).get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                DocumentSnapshot document = task.getResult();
+                if (document.exists()) {
+                    String myName = document.getString("fName");
+                    System.out.println(myName);
+                    txtName.setText(myName);
+
+                }
+            }
+        });
 
 
 
