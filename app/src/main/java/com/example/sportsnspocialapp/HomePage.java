@@ -26,7 +26,7 @@ public class HomePage extends AppCompatActivity {
         calender = findViewById(R.id.calender);
         raffle = findViewById(R.id.raffle);
         profile = findViewById(R.id.Profile);
-        pool = findViewById(R.id.Tournament);
+        pool = findViewById(R.id.buttonPool);
         buttonContact = findViewById(R.id.buttonContact);
         foot = findViewById(R.id.imageButtonFootball);
         gaa = findViewById(R.id.imageButtongaa);
@@ -36,6 +36,8 @@ public class HomePage extends AppCompatActivity {
         tag = findViewById(R.id.imageButtontag);
        tabletennis = findViewById(R.id.imageButtontennis);
 
+
+
 // start part 1
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,12 +46,11 @@ public class HomePage extends AppCompatActivity {
                     calender.setVisibility(View.VISIBLE);
                     raffle.setVisibility(View.VISIBLE);
                     profile.setVisibility(View.VISIBLE);
-                    pool.setVisibility(View.VISIBLE);
                 } else {
                     calender.setVisibility(View.GONE);
                     raffle.setVisibility(View.GONE);
                     profile.setVisibility(View.GONE);
-                    pool.setVisibility(View.GONE);
+
                 }
 
             }

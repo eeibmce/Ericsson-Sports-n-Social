@@ -31,11 +31,24 @@ import java.util.Map;
 public class WinnerActivity extends AppCompatActivity {
 
     FirebaseFirestore fStore;
+    int skillRatingUser;
+    int skillRatingOpp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_winner);
+
+
+
+
+
+
+
+
+
+
+
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -58,6 +71,8 @@ public class WinnerActivity extends AppCompatActivity {
                     //Reading opponent Skill Rating in database
                     int skillRatingOpponent = document.getLong("Skill Rating").intValue();
                     int skillRatingNewOpp = skillRatingOpponent - 30;
+
+                    //Calculating Skill Rating using method created below
 
                     //Updating Firestore
                     DocumentReference userOpp = db.collection("users").document(opponentID);
@@ -178,6 +193,13 @@ public class WinnerActivity extends AppCompatActivity {
         });
 
     }
+
+
+
+
+
+
+
     //Makes the back button non functional
     @Override
     public void onBackPressed() {
