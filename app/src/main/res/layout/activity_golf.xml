@@ -49,6 +49,17 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
 
+        <Button
+            android:id="@+id/back"
+            android:layout_width="83dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="#1565C0"
+            android:text="Back"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageButton
             android:id="@+id/imageButton3"
             android:layout_width="70dp"

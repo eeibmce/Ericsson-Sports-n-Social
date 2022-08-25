@@ -16,8 +16,7 @@
             android:layout_width="406dp"
             android:layout_height="74dp"
             android:layout_marginTop="16dp"
-            android:background="#283593"
-            android:fontFamily="sans-serif-smallcaps"
+            android:fontFamily="@font/ericssoncapital"
             android:text="Ericsson Table Tennis Club"
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -34,10 +33,10 @@
             android:layout_height="78dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.051"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.033"
+            app:layout_constraintVertical_bias="0.991"
             app:srcCompat="@drawable/ericssonlogo" />
 
         <ImageButton
@@ -96,10 +95,10 @@
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.894" />
 
         <TextView
             android:id="@+id/textView2"
@@ -111,8 +110,9 @@
             android:onClick="browser"
             android:text="Click here to view the website"
             android:textAlignment="center"
-            android:textColor="#37474F"
+            android:textColor="#26CC42"
             android:textSize="16sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.557"
@@ -144,6 +144,7 @@
             android:inputType="textMultiLine"
             android:scrollbars="vertical"
             android:text="Welcome to the Table Tennis Club.The club’s main focus is introducing new members to the game, improving your skills and most of all, having fun. It is open to all levels, whether you’re experienced or just a beginner."
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.645"
@@ -154,9 +155,10 @@
 
         <Button
             android:id="@+id/back"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
+            android:layout_width="80dp"
+            android:layout_height="44dp"
             android:layout_marginStart="8dp"
+            android:backgroundTint="#1565C0"
             android:text="Back"
             android:textSize="10sp"
             app:layout_constraintStart_toStartOf="parent"

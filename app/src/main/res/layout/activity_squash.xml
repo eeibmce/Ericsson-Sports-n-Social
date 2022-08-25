@@ -13,11 +13,10 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="516dp"
-            android:layout_height="46dp"
+            android:layout_width="507dp"
+            android:layout_height="84dp"
             android:layout_marginTop="16dp"
-            android:background="#283593"
-            android:fontFamily="sans-serif-smallcaps"
+            android:fontFamily="@font/ericssoncapital"
             android:text="Ericsson Squash Club"
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -82,7 +81,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.066"
+            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/ericssonlogo" />
 
         <Button
@@ -96,10 +95,10 @@
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.891" />
 
         <TextView
             android:id="@+id/textView2"
@@ -111,7 +110,7 @@
             android:onClick="browser"
             android:text="Click here to view the website"
             android:textAlignment="center"
-            android:textColor="#37474F"
+            android:textColor="#39C52C"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -123,8 +122,8 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="503dp"
-            android:layout_height="146dp"
+            android:layout_width="239dp"
+            android:layout_height="138dp"
             android:contentDescription="TODO"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -144,6 +143,7 @@
             android:inputType="textMultiLine"
             android:scrollbars="vertical"
             android:text="Welcome to the squash club. You must be a Member of the SPSO for Insurance Purposes. Then E-mail Us  and pay the membership fee (€5) to any of Committee"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -154,9 +154,10 @@
 
         <Button
             android:id="@+id/back"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
+            android:layout_width="99dp"
+            android:layout_height="48dp"
             android:layout_marginStart="8dp"
+            android:backgroundTint="#1565C0"
             android:text="Back"
             android:textSize="10sp"
             app:layout_constraintStart_toStartOf="parent"
