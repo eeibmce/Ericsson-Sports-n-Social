@@ -188,10 +188,10 @@
             app:cornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.032"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.134" />
 
         <TextView
             android:id="@+id/textView6"
@@ -273,10 +273,10 @@
             android:layout_height="40dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.456"
+            app:layout_constraintHorizontal_bias="0.363"
             app:layout_constraintStart_toEndOf="@+id/buttonContact"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.113"
+            app:layout_constraintVertical_bias="0.159"
             app:srcCompat="@drawable/arachblue_removebg_preview" />
 
         <TextView
@@ -386,6 +386,23 @@
             app:layout_constraintEnd_toEndOf="@+id/imageButtontag"
             app:layout_constraintStart_toStartOf="@+id/imageButtontag"
             app:layout_constraintTop_toTopOf="@+id/imageButtontag" />
+
+        <Button
+            android:id="@+id/buttonPool"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="#1565C0"
+            android:text="Ranked Pool"
+            android:textColor="@color/black"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonContact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_one" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
