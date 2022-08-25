@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundeoin"
-    tools:context=".GolfActivity">
+    tools:context=".TagRugbyActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -75,13 +75,13 @@
             app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/essalogo" />
 
-        <CheckBox
-            android:id="@+id/checkBox"
+        <Button
+            android:id="@+id/checkBoxTagRugby"
             android:layout_width="98dp"
             android:layout_height="62dp"
-            android:background="#C62828"
+            android:backgroundTint="#249C4F"
             android:text="Join"
-            android:textSize="24sp"
+            android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.083"

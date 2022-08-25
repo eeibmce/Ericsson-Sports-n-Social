@@ -46,6 +46,7 @@ public class HomePage extends AppCompatActivity {
                     calender.setVisibility(View.VISIBLE);
                     raffle.setVisibility(View.VISIBLE);
                     profile.setVisibility(View.VISIBLE);
+
                 } else {
                     calender.setVisibility(View.GONE);
                     raffle.setVisibility(View.GONE);
@@ -68,8 +69,8 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), WorkingTableTennis.class));
-    }
-});
+            }
+        });
 
         squash.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,8 +1,10 @@
 package com.example.sportsnspocialapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -14,21 +16,26 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class SquashActivity extends AppCompatActivity {
     Button back;
     private ImageButton button;
     private ImageButton button2;
     String squashJoinClub;
-    CheckBox squashJoin;
+    Button squashJoin;
     FirebaseFirestore fStore;
     FirebaseAuth fAuth;
+    boolean mySquashClubStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,30 +69,106 @@ public class SquashActivity extends AppCompatActivity {
                 openCalendar();
             }
         });
-        squashJoin = (CheckBox) findViewById(R.id.checkBox);
+        squashJoin = (Button) findViewById(R.id.checkBoxSquash);
         fStore = FirebaseFirestore.getInstance();
         fAuth = FirebaseAuth.getInstance();
         squashJoinClub = "Member";
 //
-        squashJoin.setOnClickListener(view -> {
-            Toast.makeText(SquashActivity.this, "You have joined this club!", Toast.LENGTH_LONG).show();
-            String UserEmail = fAuth.getCurrentUser().getEmail();
-            fStore.collection("users")
-                    .whereEqualTo("email", UserEmail)
-                    .get()
-                    .addOnCompleteListener(task -> {
-                        if (task.isSuccessful()) {
-                            for (QueryDocumentSnapshot document : task.getResult()) {
+        String UserEmail2 = fAuth.getCurrentUser().getEmail();
+        fStore.collection("users")
+                .whereEqualTo("email", UserEmail2)
+                .get()
+                .addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        for (QueryDocumentSnapshot document : task.getResult()) {
 
-                                Map<String, Object> user = new HashMap<>();
-                                user.put("Squash Club", squashJoinClub);
-                                fStore.collection("users").document(document.getId())
-                                        .update("Squash Club", "Member");
-                            }
-                        } else {
-                            Log.d("[]", "Error getting documents: ", task.getException());
+                            fStore.collection("users").document(document.getId())
+                                    .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                            if (task.isSuccessful()) {
+                                                DocumentSnapshot document = task.getResult();
+                                                if (document.exists()) {
+                                                    String verifyTagRugbyMember = document.getString("Squash Club");
+
+                                                    if (Objects.equals(verifyTagRugbyMember, "Member")) {
+                                                        mySquashClubStatus = true;
+                                                        squashJoin.setText("Leave");
+                                                        squashJoin.setBackgroundColor(0xFFFF0000);
+                                                    } else {
+                                                        mySquashClubStatus = false;
+                                                        squashJoin.setText("Join");
+                                                        squashJoin.setBackgroundColor(Color.parseColor("#249C4F"));
+                                                    }
+
+
+
+                                                    Log.d("[lolz]", "DocumentSnapshot data: " + document.getData());
+                                                } else {
+                                                    Log.d("[]", "No such document");
+                                                }
+                                            } else {
+                                                Log.d("[]", "get failed with ", task.getException());
+                                            }
+                                        }
+                                    });
+
+
                         }
-                    });
+
+                    } else {
+                        Log.d("[]", "Error getting documents: ", task.getException());
+                    }
+                });
+
+        squashJoin.setOnClickListener(view -> {
+            if (mySquashClubStatus == false) {
+                mySquashClubStatus = true;
+                squashJoin.setText("Leave");
+                squashJoin.setBackgroundColor(0xFFFF0000);
+                Toast.makeText(SquashActivity.this, "You have joined this club!", Toast.LENGTH_LONG).show();
+                String UserEmail = fAuth.getCurrentUser().getEmail();
+                fStore.collection("users")
+                        .whereEqualTo("email", UserEmail)
+                        .get()
+                        .addOnCompleteListener(task -> {
+                            if (task.isSuccessful()) {
+                                for (QueryDocumentSnapshot document : task.getResult()) {
+
+                                    Map<String, Object> user = new HashMap<>();
+                                    user.put("clubs", squashJoinClub);
+                                    fStore.collection("users").document(document.getId())
+                                            .update("Squash Club", "Member");
+                                }
+                            } else {
+                                Log.d("[]", "Error getting documents: ", task.getException());
+                            }
+                        });
+            }
+            else {
+                mySquashClubStatus = false;
+                squashJoin.setText("Join");
+                squashJoin.setBackgroundColor(Color.parseColor("#249C4F"));
+                Toast.makeText(SquashActivity.this, "You have left this club!", Toast.LENGTH_LONG).show();
+                String UserEmail = fAuth.getCurrentUser().getEmail();
+                fStore.collection("users")
+                        .whereEqualTo("email", UserEmail)
+                        .get()
+                        .addOnCompleteListener(task -> {
+                            if (task.isSuccessful()) {
+                                for (QueryDocumentSnapshot document : task.getResult()) {
+
+                                    Map<String, Object> user = new HashMap<>();
+                                    user.put("clubs", squashJoinClub);
+                                    fStore.collection("users").document(document.getId())
+                                            .update("Squash Club", "Not a Member");
+                                }
+                            } else {
+                                Log.d("[]", "Error getting documents: ", task.getException());
+                            }
+                        });
+            }
+
         });
     }
 

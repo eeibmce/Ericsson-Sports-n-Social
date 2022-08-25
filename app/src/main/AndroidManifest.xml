@@ -16,10 +16,16 @@
         android:theme="@style/Theme.SportsNSocialAPP"
         tools:targetApi="31">
         <activity
+            android:name=".MyClubs"
+            android:exported="false" />
+        <activity
             android:name=".VisitorActivity"
             android:exported="false" />
         <activity
             android:name=".LoseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TagRugbyActivity"
             android:exported="false" />
         <activity
             android:name=".WinnerActivity"
@@ -30,6 +36,9 @@
         <activity
             android:name=".GameActivity"
             android:exported="true" />
+        <activity
+            android:name=".SquashActivity"
+            android:exported="false" />
         <activity
             android:name=".HomePage"
             android:exported="false" />
@@ -47,6 +56,15 @@
             android:exported="false" />
         <activity
             android:name=".GolfActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WorkingTableTennis"
+            android:exported="false" />
+        <activity
+            android:name=".GaaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BadmintonActivity"
             android:exported="false" />
         <activity
             android:name=".FootballActivity"
