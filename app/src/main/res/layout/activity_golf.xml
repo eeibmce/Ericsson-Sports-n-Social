@@ -9,29 +9,33 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="917dp"
+        android:background="@drawable/backgroundeoin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="435dp"
-            android:layout_height="49dp"
+            android:layout_width="429dp"
+            android:layout_height="39dp"
             android:layout_marginTop="16dp"
-            android:background="#283593"
-            android:fontFamily="sans-serif-smallcaps"
+            android:fontFamily="@font/ericssoncapital"
             android:text="Ericsson Golf Society"
             android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="34sp"
+            android:textColor="#FCFDFD"
+            android:textSize="28sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.121" />
+            app:layout_constraintVertical_bias="0.124" />
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="55dp"
-            android:layout_height="50dp"
+            android:layout_width="36dp"
+            android:layout_height="30dp"
             android:background="#00283593"
             android:contentDescription="TODO"
             android:scaleType="centerCrop"
@@ -45,18 +49,29 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
 
+        <Button
+            android:id="@+id/back"
+            android:layout_width="83dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="#1565C0"
+            android:text="Back"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <ImageButton
             android:id="@+id/imageButton3"
-            android:layout_width="100dp"
-            android:layout_height="70dp"
+            android:layout_width="70dp"
+            android:layout_height="52dp"
             android:background="#00FFFFFF"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.732"
+            app:layout_constraintHorizontal_bias="0.824"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.039"
+            app:layout_constraintVertical_bias="0.04"
             app:srcCompat="@drawable/timetable2"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
@@ -77,17 +92,19 @@
 
         <Button
             android:id="@+id/checkBoxGolf"
-            android:layout_width="98dp"
-            android:layout_height="62dp"
-            android:backgroundTint="#249C4F"
+            android:layout_width="85dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="#249C1F"
             android:text="Join"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.083"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.967" />
+            app:layout_constraintVertical_bias="0.895" />
 
         <TextView
             android:id="@+id/textView2"
@@ -96,14 +113,15 @@
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="24dp"
+            android:fontFamily="sans-serif-medium"
             android:onClick="browser"
             android:text="Click here to view the website"
             android:textAlignment="center"
-            android:textColor="#37474F"
+            android:textColor="#3ADD3D"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.557"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.837"
@@ -122,30 +140,44 @@
             app:layout_constraintVertical_bias="0.305"
             app:srcCompat="@drawable/golf_image" />
 
-        <EditText
+        <TextView
             android:id="@+id/editTextTextMultiLine5"
             android:layout_width="267dp"
             android:layout_height="207dp"
             android:ems="10"
+            android:fontFamily="sans-serif-medium"
             android:gravity="start|top"
             android:inputType="textMultiLine"
             android:scrollbars="vertical"
             android:text=" Welcome to the EGS Athlone webpage   With close to fifty members, we are one of the biggest societies in Ericsson Athlone.  We have an excellent fixture list and a great history over the last 30+ years.  Please use the navigation menu to browse the site.   If you have any suggestions or improvements for the site please let a committee member know.  New female or male members of any golfing level are most welcome! If you would like to join please contact a committee member listed on the 'Join' page"
+            android:textColor="#F1F2F4"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.645"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.679"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+            app:layout_constraintVertical_bias="0.647"
+            tools:ignore="SpeakableTextPresentCheck" />
 
-        <Button
-            android:id="@+id/back"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="8dp"
-            android:text="Back"
-            android:textSize="10sp"
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="96dp"
+            android:layout_height="89dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/essalogo" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="83dp"
+            android:layout_height="75dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.009"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

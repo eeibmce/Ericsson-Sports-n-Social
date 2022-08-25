@@ -175,9 +175,9 @@ public class BadmintonActivity extends AppCompatActivity {
     }
 
     public void openChatPage() {
-        Intent intent = new Intent(this, ChatPage.class);
-        startActivity(intent);
-        setContentView(R.layout.activity_chat_page);
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/login/"));
+        startActivity(browserIntent);
+
     }
 
     public void openCalendar() {
@@ -191,6 +191,7 @@ public class BadmintonActivity extends AppCompatActivity {
         startActivity(browserIntent);
 
     }
+
 
 }
 

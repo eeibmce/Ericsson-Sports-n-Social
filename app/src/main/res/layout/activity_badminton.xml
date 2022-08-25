@@ -13,11 +13,10 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="424dp"
-            android:layout_height="90dp"
+            android:layout_width="440dp"
+            android:layout_height="79dp"
             android:layout_marginTop="16dp"
-            android:background="#283593"
-            android:fontFamily="sans-serif-smallcaps"
+            android:fontFamily="@font/ericssoncapital"
             android:text="Ericsson Badminton Club"
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -45,6 +44,18 @@
             tools:ignore="SpeakableTextPresentCheck" />
 
 
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="96dp"
+            android:layout_height="78dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/ericssonlogo" />
+
         <ImageButton
             android:id="@+id/imageButton3"
             android:layout_width="100dp"
@@ -62,17 +73,15 @@
 
 
         <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="148dp"
-            android:layout_height="128dp"
-            android:contentDescription="TODO"
-            android:scaleType="centerCrop"
+            android:id="@+id/imageView5"
+            android:layout_width="91dp"
+            android:layout_height="77dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.984"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintVertical_bias="0.99"
             app:srcCompat="@drawable/essalogo" />
 
         <Button
@@ -84,10 +93,10 @@
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.083"
+            app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.967" />
+            app:layout_constraintVertical_bias="0.883" />
 
         <TextView
             android:id="@+id/textView2"
@@ -99,7 +108,7 @@
             android:onClick="browser"
             android:text="Click here to view the website"
             android:textAlignment="center"
-            android:textColor="#37474F"
+            android:textColor="#3BD335"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -123,7 +132,7 @@
             app:layout_constraintVertical_bias="0.302"
             app:srcCompat="@drawable/badminton" />
 
-        <EditText
+        <TextView
             android:id="@+id/editTextTextMultiLine5"
             android:layout_width="267dp"
             android:layout_height="207dp"
@@ -132,19 +141,21 @@
             android:inputType="textMultiLine"
             android:scrollbars="vertical"
             android:text="Welcome to the Badminton club. To join E-mail any of the Committee members for details on membership  (New membership forms to be signed by members for 2022) : Members list (New from Jan 2022)"
+            android:textAlignment="center"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.645"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.638"
-            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+            app:layout_constraintVertical_bias="0.647"
+            tools:ignore="RtlCompat,SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/back"
             android:layout_width="70dp"
             android:layout_height="35dp"
             android:layout_marginStart="8dp"
+            android:backgroundTint="#1565C0"
             android:text="Back"
             android:textSize="10sp"
             app:layout_constraintStart_toStartOf="parent"

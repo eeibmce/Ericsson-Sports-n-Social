@@ -13,11 +13,10 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="436dp"
-            android:layout_height="53dp"
+            android:layout_width="507dp"
+            android:layout_height="84dp"
             android:layout_marginTop="16dp"
-            android:background="#283593"
-            android:fontFamily="sans-serif-smallcaps"
+            android:fontFamily="@font/ericssoncapital"
             android:text="Ericsson Squash Club"
             android:textAlignment="center"
             android:textColor="@color/white"
@@ -28,19 +27,20 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.124" />
 
+
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="55dp"
-            android:layout_height="50dp"
+            android:layout_width="62dp"
+            android:layout_height="55dp"
             android:background="#00283593"
             android:contentDescription="TODO"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.938"
+            app:layout_constraintHorizontal_bias="0.955"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.051"
+            app:layout_constraintVertical_bias="0.038"
             app:srcCompat="@android:drawable/stat_notify_chat"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -53,41 +53,52 @@
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.732"
+            app:layout_constraintHorizontal_bias="0.752"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.039"
+            app:layout_constraintVertical_bias="0.032"
             app:srcCompat="@drawable/timetable2"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
-
         <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="148dp"
-            android:layout_height="128dp"
-            android:contentDescription="TODO"
-            android:scaleType="centerCrop"
+            android:id="@+id/imageView5"
+            android:layout_width="91dp"
+            android:layout_height="77dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.984"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.99"
+            app:srcCompat="@drawable/essalogo" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="89dp"
+            android:layout_height="66dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/essalogo" />
+            app:srcCompat="@drawable/ericssonlogo" />
 
         <Button
             android:id="@+id/checkBoxSquash"
-            android:layout_width="98dp"
-            android:layout_height="62dp"
+            android:layout_width="85dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
             android:backgroundTint="#249C4F"
             android:text="Join"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.083"
+            app:layout_constraintHorizontal_bias="0.487"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.967" />
+            app:layout_constraintVertical_bias="0.891" />
 
         <TextView
             android:id="@+id/textView2"
@@ -99,11 +110,11 @@
             android:onClick="browser"
             android:text="Click here to view the website"
             android:textAlignment="center"
-            android:textColor="#37474F"
+            android:textColor="#39C52C"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.557"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.837"
@@ -112,15 +123,15 @@
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="239dp"
-            android:layout_height="147dp"
+            android:layout_height="138dp"
             android:contentDescription="TODO"
             android:scaleType="centerCrop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.302"
+            app:layout_constraintVertical_bias="0.32"
             app:srcCompat="@drawable/squash_image" />
 
         <EditText
@@ -132,19 +143,21 @@
             android:inputType="textMultiLine"
             android:scrollbars="vertical"
             android:text="Welcome to the squash club. You must be a Member of the SPSO for Insurance Purposes. Then E-mail Us  and pay the membership fee (€5) to any of Committee"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.645"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.638"
+            app:layout_constraintVertical_bias="0.654"
             tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
         <Button
             android:id="@+id/back"
-            android:layout_width="70dp"
-            android:layout_height="35dp"
+            android:layout_width="99dp"
+            android:layout_height="48dp"
             android:layout_marginStart="8dp"
+            android:backgroundTint="#1565C0"
             android:text="Back"
             android:textSize="10sp"
             app:layout_constraintStart_toStartOf="parent"

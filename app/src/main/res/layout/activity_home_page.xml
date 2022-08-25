@@ -11,56 +11,57 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background"
+        android:background="@drawable/backgroundeoinold"
         tools:context=".HomePage">
-
 
         <TextView
             android:id="@+id/textView_one"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
             android:fontFamily="sans-serif-black"
             android:text="@string/title"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textColor="#FFFFFF"
+            android:textColor="#1565C0"
             android:textSize="40sp"
-            app:layout_constraintTop_toTopOf="parent" />
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="32dp" />
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="50dp"
             android:layout_height="70dp"
-            android:layout_marginTop="39dp"
+            android:layout_marginTop="136dp"
             android:src="@drawable/ericssonlogo"
             app:layout_constraintEnd_toStartOf="@+id/imageButtonBadminton"
-            app:layout_constraintHorizontal_bias="0.357"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageButtongaa" />
 
         <ImageView
             android:id="@+id/imageViewLogo2"
-            android:layout_width="54dp"
-            android:layout_height="70dp"
-            android:layout_marginTop="39dp"
+            android:layout_width="63dp"
+            android:layout_height="86dp"
+            android:layout_marginTop="124dp"
             android:src="@drawable/essalogo"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toEndOf="@+id/imageButtonBadminton"
             app:layout_constraintTop_toBottomOf="@+id/imageButtontag" />
 
         <ImageButton
             android:id="@+id/imageButtongaa"
-            android:layout_width="0dp"
-            android:layout_height="149dp"
+            android:layout_width="181dp"
+            android:layout_height="156dp"
             android:layout_marginStart="35dp"
-            android:layout_marginTop="551dp"
+            android:layout_marginTop="544dp"
             android:layout_marginEnd="205dp"
             android:background="#191F4D"
             android:padding="4dp"
             android:scaleType="centerInside"
             android:src="@drawable/ericssongaa"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -69,7 +70,7 @@
             android:layout_width="0dp"
             android:layout_height="148dp"
             android:layout_marginStart="120dp"
-            android:layout_marginTop="709dp"
+            android:layout_marginTop="688dp"
             android:layout_marginEnd="120dp"
             android:background="#191F4D"
             android:cropToPadding="false"
@@ -83,8 +84,8 @@
 
         <ImageButton
             android:id="@+id/imageButtonSquash"
-            android:layout_width="0dp"
-            android:layout_height="148dp"
+            android:layout_width="161dp"
+            android:layout_height="144dp"
             android:layout_marginStart="35dp"
             android:layout_marginTop="396dp"
             android:layout_marginEnd="205dp"
@@ -100,8 +101,8 @@
 
         <ImageButton
             android:id="@+id/imageButtonFootball"
-            android:layout_width="0dp"
-            android:layout_height="148dp"
+            android:layout_width="161dp"
+            android:layout_height="144dp"
             android:layout_marginStart="35dp"
             android:layout_marginTop="240dp"
             android:layout_marginEnd="205dp"
@@ -118,13 +119,14 @@
 
         <ImageButton
             android:id="@+id/imageButtonGolf"
-            android:layout_width="0dp"
-            android:layout_height="148dp"
+            android:layout_width="172dp"
+            android:layout_height="143dp"
             android:layout_marginStart="205dp"
             android:layout_marginTop="240dp"
             android:layout_marginEnd="35dp"
             android:layout_marginBottom="370dp"
             android:background="#191F4D"
+            android:fadingEdge="horizontal|vertical"
             android:scaleType="centerCrop"
             android:src="@drawable/ericssongolf1"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -173,21 +175,23 @@
 
         <Button
             android:id="@+id/buttonContact"
-            android:layout_width="0dp"
-            android:layout_height="70dp"
+            android:layout_width="300dp"
+            android:layout_height="69dp"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="150dp"
-            android:layout_marginEnd="70dp"
-            android:layout_marginBottom="495dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="485dp"
+            android:backgroundTint="#1565C0"
             android:onClick="browser"
             android:text="Contact Us"
-            app:cornerRadius="15dp"
+            android:textColor="@color/black"
+            app:cornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.032"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.134" />
 
         <TextView
             android:id="@+id/textView6"
@@ -197,7 +201,7 @@
             android:layout_marginTop="125dp"
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="15dp"
-            android:background="#011475"
+            android:background="#1565C0"
             android:padding="4dp"
             android:text="Badminton"
             android:textColor="#FFFFFF"
@@ -215,14 +219,16 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="15dp"
             android:background="#011475"
-            android:backgroundTint="#011475"
+            android:backgroundTint="#1565C0"
             android:padding="3dp"
             android:text="Soccer"
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="@+id/imageButtonFootball"
             app:layout_constraintEnd_toEndOf="@+id/imageButtonFootball"
+            app:layout_constraintHorizontal_bias="0.571"
             app:layout_constraintStart_toStartOf="@+id/imageButtonFootball"
-            app:layout_constraintTop_toTopOf="@+id/imageButtonFootball" />
+            app:layout_constraintTop_toTopOf="@+id/imageButtonFootball"
+            app:layout_constraintVertical_bias="0.163" />
 
         <TextView
             android:id="@+id/textView5"
@@ -232,7 +238,7 @@
             android:layout_marginTop="130dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:background="#011475"
+            android:background="#1565C0"
             android:padding="4dp"
             android:text="Gaelic"
             android:textColor="#FFFFFF"
@@ -249,17 +255,29 @@
             android:layout_marginTop="125dp"
             android:layout_marginEnd="35dp"
             android:layout_marginBottom="15dp"
-            android:background="#011475"
+            android:background="#1565C0"
             android:padding="4dp"
             android:text="Golf"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="@+id/imageButtonGolf"
             app:layout_constraintEnd_toEndOf="@+id/imageButtonGolf"
+            app:layout_constraintHorizontal_bias="0.321"
             app:layout_constraintStart_toEndOf="@+id/imageButtonFootball"
-            app:layout_constraintTop_toTopOf="@+id/imageButtonGolf" />
+            app:layout_constraintTop_toTopOf="@+id/imageButtonGolf"
+            app:layout_constraintVertical_bias="0.0" />
 
-
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.363"
+            app:layout_constraintStart_toEndOf="@+id/buttonContact"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.159"
+            app:srcCompat="@drawable/arachblue_removebg_preview" />
 
         <TextView
             android:id="@+id/calender"
@@ -301,6 +319,19 @@
             app:layout_constraintTop_toBottomOf="@+id/calender" />
 
         <TextView
+            android:id="@+id/Tournament"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/white"
+            android:text="Pool Tournament"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.939"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/raffle" />
+
+        <TextView
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -308,7 +339,7 @@
             android:layout_marginTop="130dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:background="#011475"
+            android:background="#1565C0"
             android:padding="4dp"
             android:text="Tabletennis"
             android:textAlignment="center"
@@ -328,14 +359,16 @@
             android:layout_marginTop="130dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:background="#011475"
+            android:background="#1565C0"
             android:padding="4dp"
             android:text="Squash"
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="@+id/imageButtonSquash"
             app:layout_constraintEnd_toEndOf="@+id/imageButtonSquash"
+            app:layout_constraintHorizontal_bias="0.511"
             app:layout_constraintStart_toStartOf="@+id/imageButtonSquash"
-            app:layout_constraintTop_toTopOf="@+id/imageButtonSquash" />
+            app:layout_constraintTop_toTopOf="@+id/imageButtonSquash"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textView9"
@@ -345,7 +378,7 @@
             android:layout_marginTop="130dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:background="#011475"
+            android:background="#1565C0"
             android:padding="4dp"
             android:text="Tag Rugby"
             android:textColor="#FFFFFF"
@@ -354,37 +387,22 @@
             app:layout_constraintStart_toStartOf="@+id/imageButtontag"
             app:layout_constraintTop_toTopOf="@+id/imageButtontag" />
 
-        <ImageView
-            android:id="@+id/menu"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_above="@id/imageButtonGolf"
-            android:layout_marginTop="55dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.456"
-            app:layout_constraintStart_toEndOf="@+id/buttonContact"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.113"
-            app:srcCompat="@drawable/ooo" />
-
         <Button
             android:id="@+id/buttonPool"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="25dp"
-            android:layout_marginTop="19dp"
+            android:layout_marginTop="5dp"
             android:layout_marginEnd="25dp"
-            android:fontFamily="sans-serif"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="#1565C0"
             android:text="Ranked Pool"
-            android:textStyle="bold"
-            app:cornerRadius="15dp"
+            android:textColor="@color/black"
+            app:cornerRadius="20dp"
             app:layout_constraintBottom_toTopOf="@+id/buttonContact"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.529"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView_one"
-            app:layout_constraintVertical_bias="0.333" />
+            app:layout_constraintTop_toBottomOf="@+id/textView_one" />
 
 
 
