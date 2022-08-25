@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".HomePage">
+
+
+        <TextView
+            android:id="@+id/textView_one"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/title"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="50dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="39dp"
+            android:src="@drawable/ericssonlogo"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonBadminton"
+            app:layout_constraintHorizontal_bias="0.357"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtongaa" />
+
+        <ImageView
+            android:id="@+id/imageViewLogo2"
+            android:layout_width="54dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="39dp"
+            android:src="@drawable/essalogo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonBadminton"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtontag" />
+
+        <ImageButton
+            android:id="@+id/imageButtongaa"
+            android:layout_width="0dp"
+            android:layout_height="149dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="551dp"
+            android:layout_marginEnd="205dp"
+            android:background="#191F4D"
+            android:padding="4dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ericssongaa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButtonBadminton"
+            android:layout_width="0dp"
+            android:layout_height="148dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="709dp"
+            android:layout_marginEnd="120dp"
+            android:background="#191F4D"
+            android:cropToPadding="false"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/badminton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButtonSquash"
+            android:layout_width="0dp"
+            android:layout_height="148dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="396dp"
+            android:layout_marginEnd="205dp"
+            android:background="#191F4D"
+            android:cropToPadding="false"
+            android:padding="4dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/squash_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButtonFootball"
+            android:layout_width="0dp"
+            android:layout_height="148dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="240dp"
+            android:layout_marginEnd="205dp"
+            android:layout_marginBottom="370dp"
+            android:background="#191F4D"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ericssonfc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/imageButtonGolf"
+            android:layout_width="0dp"
+            android:layout_height="148dp"
+            android:layout_marginStart="205dp"
+            android:layout_marginTop="240dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="370dp"
+            android:background="#191F4D"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ericssongolf1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/imageButtontag"
+            android:layout_width="0dp"
+            android:layout_height="148dp"
+            android:layout_marginStart="205dp"
+            android:layout_marginTop="551dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="370dp"
+            android:background="#191F4D"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tagrugby_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/imageButtontennis"
+            android:layout_width="0dp"
+            android:layout_height="148dp"
+            android:layout_marginStart="205dp"
+            android:layout_marginTop="396dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="370dp"
+            android:background="#191F4D"
+            android:scaleType="centerCrop"
+            android:src="@drawable/tabletennis"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <Button
+            android:id="@+id/buttonContact"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginBottom="495dp"
+            android:onClick="browser"
+            android:text="Contact Us"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="#011475"
+            android:padding="4dp"
+            android:text="Badminton"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtonBadminton"
+            app:layout_constraintEnd_toEndOf="@+id/imageButtonBadminton"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonBadminton"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonBadminton" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="#011475"
+            android:backgroundTint="#011475"
+            android:padding="3dp"
+            android:text="Soccer"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtonFootball"
+            app:layout_constraintEnd_toEndOf="@+id/imageButtonFootball"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonFootball"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonFootball" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#011475"
+            android:padding="4dp"
+            android:text="Gaelic"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtongaa"
+            app:layout_constraintEnd_toEndOf="@+id/imageButtongaa"
+            app:layout_constraintStart_toStartOf="@+id/imageButtongaa"
+            app:layout_constraintTop_toTopOf="@+id/imageButtongaa" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="15dp"
+            android:background="#011475"
+            android:padding="4dp"
+            android:text="Golf"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtonGolf"
+            app:layout_constraintEnd_toEndOf="@+id/imageButtonGolf"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonFootball"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonGolf" />
+
+
+
+        <TextView
+            android:id="@+id/calender"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/white"
+            android:text="Calender"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.939"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Profile" />
+
+        <TextView
+            android:id="@+id/Profile"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:text="Profile"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.939"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menu" />
+
+        <TextView
+            android:id="@+id/raffle"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/white"
+            android:text="Raffle"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.939"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calender" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#011475"
+            android:padding="4dp"
+            android:text="Tabletennis"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/imageButtontag"
+            app:layout_constraintEnd_toEndOf="@+id/imageButtontennis"
+            app:layout_constraintHorizontal_bias="0.71"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonSquash"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonGolf"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#011475"
+            android:padding="4dp"
+            android:text="Squash"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtonSquash"
+            app:layout_constraintEnd_toEndOf="@+id/imageButtonSquash"
+            app:layout_constraintStart_toStartOf="@+id/imageButtonSquash"
+            app:layout_constraintTop_toTopOf="@+id/imageButtonSquash" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#011475"
+            android:padding="4dp"
+            android:text="Tag Rugby"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtontag"
+            app:layout_constraintEnd_toEndOf="@+id/imageButtontag"
+            app:layout_constraintStart_toStartOf="@+id/imageButtontag"
+            app:layout_constraintTop_toTopOf="@+id/imageButtontag" />
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_above="@id/imageButtonGolf"
+            android:layout_marginTop="55dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.456"
+            app:layout_constraintStart_toEndOf="@+id/buttonContact"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.113"
+            app:srcCompat="@drawable/ooo" />
+
+        <Button
+            android:id="@+id/buttonPool"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="25dp"
+            android:fontFamily="sans-serif"
+            android:text="Ranked Pool"
+            android:textStyle="bold"
+            app:cornerRadius="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/buttonContact"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.529"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_one"
+            app:layout_constraintVertical_bias="0.333" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

@@ -15,12 +15,12 @@
         android:id="@+id/textView_one"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="@font/ericssoncapital"
         android:text="@string/title"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        android:textStyle="bold" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -46,7 +46,7 @@
 
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/imageButtonGolf"
             android:layout_width="0dp"
             android:layout_height="148dp"
             android:layout_marginStart="205dp"
@@ -150,6 +150,7 @@
             android:layout_marginBottom="15dp"
             android:background="#011475"
             android:backgroundTint="#011475"
+            android:fontFamily="@font/ericssoncapital"
             android:padding="3dp"
             android:text="Soccer"
             android:textColor="#FFFFFF"
@@ -167,14 +168,15 @@
             android:layout_marginEnd="35dp"
             android:layout_marginBottom="15dp"
             android:background="#011475"
+            android:fontFamily="@font/ericssoncapital"
             android:padding="4dp"
             android:text="Golf"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            app:layout_constraintBottom_toBottomOf="@+id/imageButton2"
-            app:layout_constraintEnd_toEndOf="@+id/imageButton2"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtonGolf"
+            app:layout_constraintEnd_toEndOf="@+id/imageButtonGolf"
             app:layout_constraintStart_toEndOf="@+id/imageButtonFootball"
-            app:layout_constraintTop_toTopOf="@+id/imageButton2" />
+            app:layout_constraintTop_toTopOf="@+id/imageButtonGolf" />
 
         <TextView
             android:id="@+id/textView5"
@@ -185,6 +187,7 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:background="#011475"
+            android:fontFamily="@font/ericssoncapital"
             android:padding="4dp"
             android:text="Gaelic"
             android:textColor="#FFFFFF"
@@ -202,13 +205,25 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="15dp"
             android:background="#011475"
+            android:fontFamily="@font/ericssoncapital"
             android:padding="4dp"
             android:text="Pool"
             android:textColor="#FFFFFF"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/imageButtonPool"
             app:layout_constraintEnd_toEndOf="@+id/imageButtonPool"
             app:layout_constraintStart_toStartOf="@+id/imageButtonPool"
             app:layout_constraintTop_toTopOf="@+id/imageButtonPool" />
+
+        <ImageView
+            android:id="@+id/main_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="348dp"
+            android:layout_marginTop="68dp"
+            android:src="@mipmap/img"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <!--        <ImageView-->
         <!--            android:id="@+id/button"-->
