@@ -77,6 +77,7 @@ public class Profile extends AppCompatActivity {
                                 @Override
                                 public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
                                     fullName.setText(value.getString("fName"));
+                                    email.setText(value.getString("email"));
                                 }
                             });
 
