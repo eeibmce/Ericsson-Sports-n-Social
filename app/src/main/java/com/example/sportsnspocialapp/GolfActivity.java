@@ -183,7 +183,6 @@ public class GolfActivity extends AppCompatActivity {
     public void openCalendar() {
         Intent intent = new Intent(this, Calendar.class);
         startActivity(intent);
-        setContentView(R.layout.activity_calendar);
     }
 
     public void browser(View view) {

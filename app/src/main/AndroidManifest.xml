@@ -21,6 +21,18 @@
         <activity
             android:name=".VisitorActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".Calendar"
+            android:exported="false" />
+        <activity
+            android:name=".WeekViewActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".EventEditActivity"
+            android:exported="false" />
+
         <activity
             android:name=".LoseActivity"
             android:exported="false" />
@@ -78,9 +90,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Calendar"
-            android:exported="false" />
         <activity
             android:name=".ChatPage"
             android:exported="false" />

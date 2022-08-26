@@ -180,13 +180,11 @@ public class TagRugbyActivity extends AppCompatActivity {
     public void openCalendar() {
         Intent intent = new Intent(this, Calendar.class);
         startActivity(intent);
-        setContentView(R.layout.activity_calendar);
     }
 
     public void browser(View view) {
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/EricTagRugby"));
         startActivity(browserIntent);
-
     }
 
 }
